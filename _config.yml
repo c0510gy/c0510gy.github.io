@@ -173,7 +173,7 @@ analytics:
 
   ## Google Analytics
   google:
-    tracking_id : # Google Analytics id for the site
+    tracking_id : 'UA-73405475-2' # Google Analytics id for the site
     anonymize_ip: false # Anonymize IP tracking for Analytics
 
 
@@ -223,7 +223,3 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
-
-
-## Google analystics
-google_analytics: 'UA-73405475-2'
