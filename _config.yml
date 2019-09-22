@@ -223,3 +223,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+
+
+  ## Google analystics
+  google_analystics: 'UA-73405475-2'
