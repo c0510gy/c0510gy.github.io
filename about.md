@@ -11,7 +11,8 @@ This is c0510gy's blog.
 ## Who am I?
 
 ### 1. Basic infos
-
+* B.S. degree expected in Computer Science
+  * Kookmin University, Seoul, Korea (2019 ~ now)
 * Student ID: 20191632
 * Name: Sang-geon Yun (윤상건)
 * GitHub ID: [c0510gy](https://github.com/c0510gy)
