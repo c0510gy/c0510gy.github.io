@@ -225,5 +225,5 @@ plugins:
   - jemoji
 
 
-  ## Google analystics
-  google_analystics: 'UA-73405475-2'
+## Google analystics
+google_analystics: 'UA-73405475-2'
