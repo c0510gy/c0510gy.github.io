@@ -24,7 +24,7 @@ This is c0510gy's blog.
 ### 2. Activities / Honors ans Awards
 
 - 24th Samsung Humantech Paper Award Bronze prize (수학/전학 area, 3rd placed, 2017)
-    - 2차원 이상 원환공간으로의 암호화를 수행하는 위상수학적 암호화 개발
+    - 윤상건, 2차원 이상 원환공간으로의 암호화를 수행하는 위상수학적 암호화 개발
 - 34th KOI (Korea Olympiad in Informatics) National contest Bronze prize (2017)
 - 4th KMU Doorithon 2nd prize (Hackathon, 2019)
 - 2019 Google Code Jam Round 2 Qualifier
@@ -33,4 +33,6 @@ This is c0510gy's blog.
 - KMU Information Security Lab intern (2019 Summer semester ~ now)
     - Similarity hashing methods (LSH, simhash)
     - Aging Bloom filter
-
+- 2019 ACM-ICPC Seoul Regional Preliminary Contest 1st
+place among teams from Kookmin Univ. (2019)
+- 2019 ACM-ICPC Asia Seoul Regional Contest 18th place (2019)
