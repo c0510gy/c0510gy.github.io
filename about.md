@@ -46,4 +46,4 @@ place among teams from Kookmin Univ.
 - 2019~	Codeforces best finishes (Handle: c0510gy)
     - Div3 Rank: 133rd / 4791
     - Div2 Rank: 502nd / 3914
-    - Expert on Codeforces (Max rating 1762)
+    - Expert on Codeforces (Max rating 1834)
