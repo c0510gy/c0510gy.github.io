@@ -50,6 +50,6 @@ place among teams from Kookmin Univ.
 - 2019	4th KMU Doorithon (Hackathon) 2nd prize
     - Developed an android app called “Eye Keeper” that helps to protect the eyes of children who using phone.
 - 2019~	Codeforces best finishes (Handle: c0510gy)
-    - Div3 Rank: 133rd / 4791
-    - Div2 Rank: 502nd / 3914
+    - Div3 Rank: 133rd / 4,791
+    - Div2 Rank: 187th / 11,237
     - Expert on Codeforces (Max rating 1834)
