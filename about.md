@@ -28,7 +28,13 @@ This is c0510gy's blog.
 - KMU Information Security Lab intern (2019 Summer semester ~ now)
     - Similarity hashing methods (LSH, simhash)
     - Aging Bloom filter
-- 2019 ACM-ICPC Seoul Regional Preliminary Contest 1st
+    - NetFlow
+- 2020  Google Code Jam Round 2 Qualifier
+    - Google Code Jam Round 2 Qualified on Round 1A
+    - Round 2 2020: 1,980rd / 4,500
+    - Round 1A 2020: 1,165th / 11,937
+    - Qualification Round 2020: 475td / 44,434
+- 2019  ACM-ICPC Seoul Regional Preliminary Contest 1st
 place among teams from Kookmin Univ.
     - 60 teams participated from Kookmin University
 - 2019	ACM-ICPC Asia Seoul Regional Contest 18th place
