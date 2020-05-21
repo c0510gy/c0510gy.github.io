@@ -31,7 +31,7 @@ This is c0510gy's blog.
     - NetFlow
 - 2020  Google Code Jam Round 2 Qualifier
     - Google Code Jam Round 2 Qualified on Round 1A
-    - Round 2 2020: 1,980rd / 4,500
+    - Round 2 2020: 1,980td / 4,500
     - Round 1A 2020: 1,165th / 11,937
     - Qualification Round 2020: 475td / 44,434
 - 2019  ACM-ICPC Seoul Regional Preliminary Contest 1st
