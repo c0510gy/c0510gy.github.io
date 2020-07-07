@@ -23,7 +23,7 @@ This is c0510gy's blog.
 * email: ggj06281@kookmin.ac.kr
 
 ### 2. Activities / Honors ans Awards
-- Current Overall GPA 4.46 / 4.5 (~ 2019 fall semester)
+- Current Overall GPA 4.47 / 4.5 (~ 2020 spring semester)
     - Major GPA 4.5 / 4.5
 - KMU Information Security Lab intern (2019 Summer semester ~ now)
     - Similarity hashing methods (LSH, simhash)
