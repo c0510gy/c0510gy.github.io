@@ -10,7 +10,7 @@ This is c0510gy's blog.
 
 ## Who am I?
 
-### 1. Basic infos
+### 1. Basic info
 * B.S. degree expected in Computer Science
   * Kookmin University, Seoul, Korea (2019 ~ now)
 * Student ID: 20191632
