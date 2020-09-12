@@ -19,7 +19,7 @@ This is c0510gy's blog.
 * LinkedIn: [Sang-geon Yun](https://www.linkedin.com/in/sang-geon-yun/)
 * BOJ(Baekjoon Online Judge) ID: [ggj06281](https://www.acmicpc.net/user/ggj06281)
 * Codeforces Handle: [c0510gy](https://codeforces.com/profile/c0510gy)
-* Youtube channel: [윤상건](https://www.youtube.com/channel/UCanu9Jk86eTv8OE_7TjSElg)
+* Youtube channel: [Sang-geon Yun](https://www.youtube.com/channel/UCanu9Jk86eTv8OE_7TjSElg)
 * email: ggj06281@kookmin.ac.kr
 
 ### 2. Activities / Honors ans Awards
