@@ -29,6 +29,9 @@ This is c0510gy's blog.
     - Similarity hashing methods (LSH, simhash)
     - Aging Bloom filter
     - NetFlow
+- 2021 KAKAO BLIND RECRUITMENT Coding Test
+    - All solved in 2 hours (7 problems in 2 hours)
+    - [My solutions](https://bit.ly/3i268E7)
 - 2020  Google Code Jam Round 2 Qualifier
     - Google Code Jam Round 2 Qualified on Round 1A
     - Round 2 2020: 1,980th / 4,500
