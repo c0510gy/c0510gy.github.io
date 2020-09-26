@@ -2,7 +2,7 @@
 layout: article
 titles:
   en      : &EN       Tutoring
-  ko      : &KO       과외/강의
+  ko      : &KO       과외
 key: page-tutoring
 ---
 
