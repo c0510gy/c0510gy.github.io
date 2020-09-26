@@ -3,6 +3,11 @@ header:
       en      : &EN       Archive
       ko      : &KO       아카이브
     url: /archive.html
+  
+  - tutoring:
+      en      : &EN       Tutoring
+      ko      : &KO       과외/강의
+    url: /archive.html
 
   - titles:
       en      : &EN       About
