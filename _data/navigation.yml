@@ -7,7 +7,7 @@ header:
   - tutoring:
       en      : &EN       Tutoring
       ko      : &KO       과외/강의
-    url: /archive.html
+    url: /tutoring.html
 
   - titles:
       en      : &EN       About
