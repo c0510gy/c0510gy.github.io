@@ -25,10 +25,16 @@ This is c0510gy's blog.
 ### 2. Activities / Honors ans Awards
 - Current Overall GPA 4.47 / 4.5 (~ 2020 spring semester)
     - Major GPA 4.5 / 4.5
-- KMU Information Security Lab intern (2019 Summer semester ~ now)
+- Software Engineer intern at the Riderdash (Jun 2020 - now)
+    - Web development: Used TypeScript, React.js, Redux.js, Apollo + GraphQL
+    - Research project: Improvement of the image recognition system for car number & VIN (Vehicle Identification Number) from a given document or car image.
+- KMU Information Security Lab intern (2019 Summer semester ~  - Jun 2020)
     - Similarity hashing methods (LSH, simhash)
     - Aging Bloom filter
     - NetFlow
+- 2020  ICPC Seoul Regional Preliminary Contest 33rd place
+    - 365 teams participated nationwide
+    - 1st place among teams from Kookmin Univ. (11 teams participated from Kookmin University)
 - 2021 KAKAO BLIND RECRUITMENT Coding Test
     - All solved in 2 hours (7 problems in 2 hours)
     - [My solutions](https://bit.ly/3i268E7)
