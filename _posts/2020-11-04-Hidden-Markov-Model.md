@@ -33,7 +33,7 @@ Markov chain은 다음과 같은 요소들로 표현될 수 있다:
 
 ## 2. The Hidden Markov Model
 
-Markov chain은 관측 가능한 이벤트들의 순차배열에 대한 확률을 계산할 때 유용하다. 하지만, 많은 경우에 관찰하려는 이벤트들은 **hidden**상태에 있다. 즉, 직적적으로 관측할 수 없는 이벤트들일 경우가 많다. 예를 들어, 일반적으로 텍스트에 대한 태그를 관측하기 보다는 텍스트에 포함되어 있는 단어들로 부터 태그를 유추해 낸다. 이런 상황에서 태그들을 **hidden**이라고 한다.
+Markov chain은 관측 가능한 이벤트들의 순차배열에 대한 확률을 계산할 때 유용하다. 하지만, 많은 경우에 관찰하려는 이벤트들은 **hidden**상태에 있다. 즉, 직접적으로 관측할 수 없는 이벤트들일 경우가 많다. 예를 들어, 일반적으로 텍스트에 대한 태그를 관측하기 보다는 텍스트에 포함되어 있는 단어들로 부터 태그를 유추해 낸다. 이런 상황에서 태그들을 **hidden**이라고 한다.
 
 **Hidden Markov Model** (**HMM**)은 서로 인과관계가 있어 보이는 *observed*(관측된) 이벤트와 *hidden*(직접 관측할 수 없는) 이벤트를 같이 고려하게 해준다.
 
@@ -148,3 +148,43 @@ $$\alpha_t(j) = \sum_{i = 1}^N{\alpha_{t-1}(i)a_{ij}b_j(o_t)}$$
 
 ## 4. Decoding: The Viterbi Algorithm
 
+HMM과 같이 hidden 변수를 가지고 있는 어떤 모델에 대해, observation sequence의 숨은 source sequence를 찾는 작업을 **decoding** 작업이라 한다. 아이스크림 예에서 3 1 3의 관측값과 HMM이 주어졌을 때, **decoder**의 작업은 최적의 hidden 날씨 sequence인 ($H$ $H$ $H$)를 찾는 것이다. 이를 일반화 하면
+
+* **Decoding:** 주어진 HMM $\lambda = (A, B)$와 observations sequence $O = o_1, o_2, \dots, o_T$에 대해 가장 가능성 있는 state sequence $Q = q_1q_2q_3\dots q_T$를 찾아라.
+
+이 문제에 대해 다음과 같은 방법을 생각할 수 있다: 가능한 모든 hidden state sequence ($HHH$, $HHC$, $HCH$, etc.)에 대해 forward algorithm을 돌리고 observation sequence의 우도를 계산한다. 그런 후에 우도가 가장 높은 hidden state sequence를 선택한다. 하지만 앞서 확인 했듯이 state sequence의 개수가 exponential하게 많기 때문에 불가능 하다는 것을 알 수 있다.
+
+이 방법 대신, 가장 일반적인 HMMs에 대한 decoding algorithm은 **Viterbi algorithm**이다. Forward algorithm과 유사하게, **Viterbi**는 **dynamic programming**의 일종이다. 또한 Viterbi는 또 다른 dynamic programming을 이용하는 **minimum edit distance** 알고리즘과 굉장히 유사하다.
+
+[Figure A.8]
+
+Figure A.8은 Viterbi 알고리즘을 이용하여 observation sequence 3 1 3에 대한 최적의 hidden state sequence를 계산하는 예를 보여준다. 아이디어는 observation sequence를 왼쪽부터 오른쪽으로 처리하며 dp 테이블을 채워 나가는 것이다. 테이블의 각 값 $v_t(j)$은 주어진 $\lambda$에 대해 HMM이 처음 $t$개의 observations를 관측하고 가장 가능성 있는 state sequence $q_1, \dots, q_{t-1}$로 이동했을 때 state $j$를 가질 확률을 의미한다. 각 $v_t(j)$값은 현재 state로 이동할 수 있는 가장 가능성 있는 경로를 재귀적으로 가져와 계산한다. 이를 일반화 하면 다음과 같다.
+
+$$v_t(j) = \max_{q_1, \dots, q_{t-1}}{P(q_1\dots q_{t-1}, o_1, o_2, \dots, o_t, q_t=j\vert \lambda)}$$
+
+가능한 모든 이전 state sequence로 부터 최댓값 $\max_{q_1, \dots, q_{t-1}}$을 가져와서 가장 가능성 있는 경로를 표현한다는 점에 유의하라. 다른 dynamic programming 알고리즘과 마찬가지로, Viterbi는 DP table의 각 값을 재귀적으로 채워 나간다. 이미 시간 $t - 1$에 모든 각 state에 존재하게 되는 확률을 계산했다는 점을 이용하여, 현재 state로 이동할 수 있는 경로들 중 가장 높은 확률을 가진 경로를 확장하여 Viterbi 확률을 계산한다. 주어진 시간 $t$에서의 state $q_j$에 대해 $v_t(j)$의 값은 다음과 같이 계산된다.
+
+$$v_t(j) = \max_{i=1}^N{v_{t-1}(i)a_{ij}b_{j}(o_t)}$$
+
+시간 $t$에서 이전 경로를 연장하여 Viterbi 확률을 계산하기 위해 사용된 세가지 요소는 다음과 같다.
+
+* $v_{t-1}(i)$
+  * 이전 Viterbi 경로 확률
+* $a_{ij}$
+  * Transition probability
+* $b_j(o_t)$
+  * State observation 우도(likelihood)
+
+알고리즘을 정리하면 다음과 같다.
+
+1. Initialization:
+    * $v_1(j) = \pi_jb_j(o_1)$  $1\leq j \leq N$
+    * $bt_1(j) = 0$  $1 \leq j \leq N$
+2. Recursion:
+    * $v_t(j) = \max_{i=1}^N{v_{t-1}(i)a_{ij}b_j(o_t)}$  $1\leq j \leq N$, $1<t\leq T$
+    * $bt_t(j) = \argmax_{i=1}^N{v_{t-1}(i)a_{ij}b_j(o_t)}$  $1\leq j \leq N$, $1<t\leq T$
+3. Termination:
+    * The best score: $P* = \max_{i=1}^N{v_T(i)}$
+    * The start of backtrace: $q_{T*} = \argmax_{i=1}^N{v_T(i)}$
+
+## 5. HMM Training: The Forward-Backward Algorithm
