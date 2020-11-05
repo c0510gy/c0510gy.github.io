@@ -15,7 +15,7 @@ key: post-2020110402
 
 HMM (Hidden Markov Model)은 Markov chain을 기반으로 하여 만들어진다. **Markov chain**은 순차적인 랜덤 변수들의 확률에 대한 정보를 알려주는 모델이다. 여기서 랜덤 변수들은 *states*이며, 각각의 state는 어떤 집합에 속하는 값들이 된다. 이런 집합은 단어들의 집합, 날씨의 집합 등 기호로 나타내는 어떤 것이든 될 수 있다. Markov chain은 매우 강한 추측을 전제로 하고 있는데, 이는 주어진 state들의 순차배열에서 미래를 추측하고자 하면 현재의 상태(current state)만 고려하면 된다는 것이다. 현재 state이전의 states는 미래 상태에 영향을 주지 않는다. 즉, 내일의 날씨에 대해 예측하고자 하면 오늘의 날씨는 분석하지만, 어제의 날씨는 분석하지 않는다.
 
-[Figure A.1]
+![Figure A.1](blob:https://imgur.com/bfd0a0e1-c956-4527-9d0d-c83a2ce02048)
 
 **Markov Assumption**
 
