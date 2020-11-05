@@ -278,7 +278,7 @@ $$\hat{a}_{ij} = \frac{\sum_{t=1}^{T-1}\xi_t(i,j)}{\sum_{t=1}^{T-1}\sum_{k=1}^N\
 
 Observation 확률도 다시 계산해 주어야 한다. 이것은 임의의 state $j$에서 observation 어휘(vocabulary) $V$ 중 하나인 임의의 $v_k$의 확률 $\hat{b}_j(v_k)$이다. 이는 다음과 같이 시도할 수 있다.
 
-$\hat{b}_j(v_k)=\frac{\text{state }j\text{에서 }v_k\text{를 관측하는 경우의 기대값}}{\text{state }j\text{에 있는 경우의 기대값}}$
+$$\hat{b}_j(v_k)=\frac{\text{state }j\text{에서 }v_k\text{를 관측하는 경우의 기대값}}{\text{state }j\text{에 있는 경우의 기대값}}$$
 
 이를 계산하기 위해서는 시간 $t$에서 state $j$에 있을 확률인 $\gamma_t(j)$를 구해야 한다.
 
