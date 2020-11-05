@@ -182,9 +182,22 @@ $$v_t(j) = \max_{i=1}^N{v_{t-1}(i)a_{ij}b_{j}(o_t)}$$
     * $bt_1(j) = 0$  $1 \leq j \leq N$
 2. Recursion:
     * $v_t(j) = \max_{i=1}^N{v_{t-1}(i)a_{ij}b_j(o_t)}$  $1\leq j \leq N$, $1<t\leq T$
-    * $bt_t(j) = \argmax_{i=1}^N{v_{t-1}(i)a_{ij}b_j(o_t)}$  $1\leq j \leq N$, $1<t\leq T$
+    * $bt_t(j) = \arg\max_{i=1}^N{v_{t-1}(i)a_{ij}b_j(o_t)}$  $1\leq j \leq N$, $1<t\leq T$
 3. Termination:
     * The best score: $P* = \max_{i=1}^N{v_T(i)}$
-    * The start of backtrace: $q_{T*} = \argmax_{i=1}^N{v_T(i)}$
+    * The start of backtrace: $q_{T*} = \arg\max_{i=1}^N{v_T(i)}$
 
 ## 5. HMM Training: The Forward-Backward Algorithm
+
+HMMs의 세번째 문제인 HMM의 파라메터인 행렬 $A$와 $B$를 학습하는 문제를 살펴보자.
+
+* **Learning:** 주어진 observation sequence $O$와 가능한 states집합이 주어졌을 때, HMM의 파라메터 $A$와 $B$를 학습하는 것
+
+이러한 학습 알고리즘에 주어지는 입력은 label되지 않은 observation sequence $O$와 가능성 있는 hidden states $Q$를 구성하는 어휘(vocabulary)이다. 따라서, 아이스크림 문제의 경우 observation sequence $O = \{1, 3, 2, \dots\}$와 hidden states의 집합 $H$와 $C$으로 학습을 진행한다.
+
+HMM 학습을 위해 사용되는 표준 알고리즘은 **forward-backward** 알고리즘, 특수한 경우의 **Expectation-Maximization**인 **Baum-Welch** 알고리즘(1972), 또는 **EM** 알고리즘(1977)이 있다. 알고리즘을 통해 HMM의 transition probability $A$와 emission probability $B$를 학습한다. EM은 *iterative* 알고리즘으로, 초기 추정 확률을 계산하고 해당 추정치를 이용하여 더 나은 추정치를 계산하는 것을 반복한다.
+
+모든 state를 관측할 수 있는(fully visible) Markov model을 학습하는 아주 간단한 경우로 부터 시작해 보자. 각 날에 대한 온도와 아이스크림 양의 정보를 모두 알고 있는 상태다. 즉, 다음과 같이 observations와 마법처럼 알고 있는 이에 대응되는 hidden state sequence의 집합을 들을 수 있다.
+
+$$\begin{align}3&3&2\\\text{hot}&\text{hot}&\text{cold}\end{align}$$
+
