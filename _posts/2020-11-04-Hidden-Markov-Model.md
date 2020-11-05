@@ -205,3 +205,15 @@ $$1,1,2 \\ \text{cold},\text{cold},\text{cold}$$
 
 $$1,2,3 \\ \text{cold},\text{hot},\text{hot}$$
 
+이런 상황에서는 해당 학습 데이터를 이용한 최대 우도 추정으로 HMM 파라메터를 쉽게 계산할 수 있다. 먼저, 주어진 데이터의 3개의 초기 hidden state로 부터 다음과 같이 $\pi$를 계산할 수 있다.
+
+$$\pi_h=1/3, \pi_c=2/3$$
+
+주어진 데이터에서 마지막 hidden states는 무시하고 나머지 전환에서 부터 다음과 같이 행렬 $A$를 계산할 수 있다.
+
+$$\begin{align}p(hot\vert hot) = 2/3 & p(cold\vert hot) = 1/3 \\ p(cold\vert cold) = 2/3 & p(hot\vert cold) = 1/3\end{align}$$
+
+행렬 $B$도 다음과 같이 구할 수 있다.
+
+$$\begin{align}p(1\vert hot) = 0/4 = 0 & p(1\vert cold) = 3/5 = .6 \\ p(2\vert hot) = 1/4 = .25 & p(2\vert cold) = 2/5 = .4 \\ p(3\vert hot) = 3/4 = .75 & p(3\vert cold) = 0 \end{align}$$
+
