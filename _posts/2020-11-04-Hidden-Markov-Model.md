@@ -258,7 +258,7 @@ $$\text{not-quite-}\xi_t(i,j)=P(q_t=i,q_{t+1}=j,O\vert \lambda)$$
 
 Figure A.12는 $\text{not-quite-}\xi_t$의 계산에 들어가는 다양한 확률들을 보여준다: 미지의 전이 확률, 해당 간선 전의 $\alpha$ 확률, 해당 간선 이후의 $\beta$ 확률, 그리고 해당 간선 직후 observation 확률. 이 4가지 값들은 $\text{not-quite-}\xi_t$를 계산하기 위해 다음과 같이 서로 곱해진다.
 
-$$$\text{not-quite-}\xi_t$=\alpha_t(i)a_{ij}b_j(o_{t+1})\beta_{t+1}(j)$$
+$$\text{not-quite-}\xi_t=\alpha_t(i)a_{ij}b_j(o_{t+1})\beta_{t+1}(j)$$
 
 $\text{not-quite-}\xi_t$로 부터 $\xi_t$를 계산하기 위해서는 다음의 확률 분할 법칙을 따라야 한다.
 
