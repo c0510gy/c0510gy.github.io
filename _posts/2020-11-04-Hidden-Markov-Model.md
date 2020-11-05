@@ -217,3 +217,91 @@ $$p(hot\vert hot) = 2/3, p(cold\vert hot) = 1/3 \\ p(cold\vert cold) = 2/3, p(ho
 
 $$p(1\vert hot) = 0/4 = 0, p(1\vert cold) = 3/5 = .6 \\ p(2\vert hot) = 1/4 = .25, p(2\vert cold) = 2/5 = .4 \\ p(3\vert hot) = 3/4 = .75, p(3\vert cold) = 0$$
 
+하지만 실제 HMM에서는 주어진 입력에 대해 어떤 states 경로를 따랐는지 알고있지 않기 때문에 observation sequence로 부터 이들을 바로 계산할 수 없다. 예를 들어, 둘째 날의 기온은 모르지만 위의 확률값과 다른 날의 기온은 알고 있다고 하자. 이런 상황에서 Bayesian 연산을 통해 기온을 모르는 날의 기온을 추정하고 해당 추정값을 이용하여 둘째날의 기온의 기댓값을 구할 수 있을 것이다.
+
+하지만 실제 문제에는 hidden states sequence에 대한 어떠한 정보도 모르기 때문에 이보다 더 어렵다. Baum-Welch 알고리즘은 반복적(iterativaly)으로 추정하는 방법으로 이를 해결한다. 우선 전이(transition)와 관측(observation) 확률을 추정하는 것으로 시작하고 해당 추정값으로 더 좋은 확률을 유도할 것이다. 이를 위해 observation에 대한 forward 확률을 계산하고 해당 확률 질량을 해당 확률에 기여한 모든 서로다른 경로로 부터 나눌 것이다.
+
+위 알고리즘을 이해하기 위해서는 forward probability와 연관된 유용한 확률인 **backward probability**를 이해해야 한다. Backward probability $\beta$는 $t+1$에서 마지막까지의 observations만 관측했을 때 확률이다. 이때 주어진 $\lambda$에서 시간 $t$일 때 state $i$에 위치할 확률은 다음과 같다.
+
+$$\beta_{t}(i)=P(o_{t+1}, o_{t+2}, \dots, o_T\vert q_t=i, \lambda)$$
+
+이는 forward algorithm과 유사하게 귀납적 방법으로 계산할 수 있다.
+
+1. Initialization:
+    * $\beta_T(i) = 1$ $1\leq i \leq N$
+2. Recursion:
+    * $\beta_t(i) = \sum_{j=1}^N{a_{ij}b_j(o_{t+1})\beta_{t+1}(j)}$ $1\leq i\leq N, 1\leq t < T$
+3. Termination:
+    * $P(O\vert \lambda) = \sum_{j=1}^N{\pi_jb_j(o_1)\beta_1(j)}$
+
+Figure A.11에서 backward 귀납 과정을 그리고 있다.
+
+[Figure A.11]
+
+이제 forward와 backward probabilities를 이용하여 실제 경로는 알 수 없는 상태에서 observation sequence로 부터 전이확률 $a_{ij}$와 observation 확률 $b_i(o_t)$를 어떻게 구하는지 이해할 준비가 되었다.
+
+간단한 최대 우도 추정을 통해 $\hat{a}_{ij}$를 추정하는 것으로 시작하자.
+
+$$\hat{a}_{ij} = \frac{\text{state }i\text{에서 state }j\text{로 기대되는 전이 개수}}{\text{state }i\text{에서 기대되는 전이 개수}}$$
+
+분자를 어떻게 계산할 수 있을까? 직관적으로 살펴보자. Observation sequence의 특정 시점 $t$에서 주어진 전이 $i\rightarrow j$에 대한 확률을 추정했다고 가정하자. 만약 이러한 확률을 각 특정 시간 $t$에 대해 알고 있다면, 모든 시간 $t$에 대한 추정치를 더해서 전이 $i\rightarrow j$에 대한 추정치를 구할 수 있다.
+
+일반화 하면, 주어진 모델과 observation sequence에 대해 확률 $\xi_t$를 시간 $t$에 state $i$에 있고 시간 $t+1$에 state $j$에 있을 확률이라 정의하면 이를 다음과 같이 표현할 수 있다.
+
+$$\xi_t(i,j)=P(q_t=i,q_{t+1}=j\vert O,\lambda)$$
+
+$\xi_t$를 계산하기 위해 $\xi_t$와 비슷하지만 observation을 포함하는 것에서 다른 확률을 계산해야 한다.
+
+$$\text{not-quite-}\xi_t(i,j)=P(q_t=i,q_{t+1}=j,O\vert \lambda)$$
+
+[Figure A.12]
+
+Figure A.12는 $\text{not-quite-}\xi_t$의 계산에 들어가는 다양한 확률들을 보여준다: 미지의 전이 확률, 해당 간선 전의 $\alpha$ 확률, 해당 간선 이후의 $\beta$ 확률, 그리고 해당 간선 직후 observation 확률. 이 4가지 값들은 $\text{not-quite-}\xi_t$를 계산하기 위해 다음과 같이 서로 곱해진다.
+
+$$$\text{not-quite-}\xi_t$=\alpha_t(i)a_{ij}b_j(o_{t+1})\beta_{t+1}(j)$$
+
+$\text{not-quite-}\xi_t$로 부터 $\xi_t$를 계산하기 위해서는 다음의 확률 분할 법칙을 따라야 한다.
+
+$$P(X\vert Y, Z) = \frac{P(X, Y\vert Z)}{P(Y\vert Z)}$$
+
+주어진 모델에서의 주어진 observation이 발생할 확률은 다음과 같이 단순히 forward 확률과 backward 확률에 대한 합으로 구할 수 있다.
+
+$$P(O\vert \lambda) = \sum_{j=1}^N{\alpha_t(j)\beta_t(j)}$$
+
+따라서 $\xi_t$에 대한 최종 식은 다음과 같다.
+
+$$\xi_t(i,j)=\frac{\alpha_t(i)a_{ij}b_j(o_{t+1})\beta_{t+1}(j)}{\sum_{j=1}^N\alpha_t(j)\beta_t(j)}$$
+
+State $i$에서 state $j$로의 전이에 대한 기대값은 모든 $t$에 대한 $\xi$의 합이다.
+
+$$\hat{a}_{ij} = \frac{\sum_{t=1}^{T-1}\xi_t(i,j)}{\sum_{t=1}^{T-1}\sum_{k=1}^N\xi_t(i,k)}$$
+
+Observation 확률도 다시 계산해 주어야 한다. 이것은 임의의 state $j$에서 observation 어휘(vocabulary) $V$ 중 하나인 임의의 $v_k$의 확률 $\hat{b}_j(v_k)$이다. 이는 다음과 같이 시도할 수 있다.
+
+$\hat{b}_j(v_k)=\frac{\text{state }j\text{에서 }v_k\text{를 관측하는 경우의 기대값}}{\text{state }j\text{에 있는 경우의 기대값}}$
+
+이를 계산하기 위해서는 시간 $t$에서 state $j$에 있을 확률인 $\gamma_t(j)$를 구해야 한다.
+
+$$\gamma_t(j)=P(q_t=j\vert O,\lambda)$$
+
+이번에도 observation sequence를 포함하여 다음과 같이 계산할 것이다.
+
+$$\gamma_t(j)=\frac{P(q_t=j,O\vert \lambda)}{P(O\vert \lambda)}$$
+
+[Figure A.13]
+
+Figure A.13에서 확인할 수 있듯이, 위 수식의 분자는 단지 forward 확률과 backward 확률의 곱이다.
+
+$$\gamma_t(j)=\frac{\alpha_t(j)\beta_t(j)}{P(O\vert \lambda)}$$
+
+이제 $b$를 구할 준비가 끝났다. 분자는 observtion $o_t$가 우리가 관심있는 $v_k$인 모든 시간 $t$에 대한 $\gamma_t(j)$의 합으로 구한다. 분모는 모든 시간 $t$에 대한 $\gamma_t(j)$의 합으로 구한다. 이 결과로는 state $j$에 있었을 때 $v_k$를 관측한 비율이 나온다.
+
+$$\hat{b}_j(v_k)=\frac{\sum_{t=1 \text{ s.t. }O_t=v_k}^T\gamma_t(j)}{\sum_{t=1}^T\gamma_t(j)}$$
+
+이제 우리는 이전에 추정한 $A$와 $B$를 가지고 있다고 가정했을 때, observation sequence $O$로 부터 transition $A$와 observation $B$ 확률을 재추정(*re-estimate*)하는 방법을 알았다.
+
+이 재추정 방법은 iterative forward-backward algorithm의 핵심을 이룬다. 이런 forward-backward 알고리즘은 HMM의 파라메터 $\lambda = (A, B)$의 초기 추정치로 부터 시작한다. 이후 두 과정을 반복적으로 수행한다. 다른 EM (expectation-maximization) 알고리즘과 마찬가지로, forward-backward 알고리즘은 **expectation** 과정과 (aka. **E-step**) **maximization** (aka. **M-step**) 과정인 두 가지 과정을 가진다.
+
+E-step에서는 state occupancy count $\gamma$의 기댓값을 계산하고 state transition count $\xi$의 기댓값을 이전 $A$, $B$ 확률로 부터 구한다. M-step에서는 $\gamma$와 $\xi$를 이용하여 새로운 $A$와 $B$ 확률을 계산한다.
+
+원칙적으로는 forward-backward 알고리즘이 $A$와 $B$ 파라메터를 완전 비교사 학습 (unsupervised learning)으로 추정할 수 있지만, 실제로는 초기 조건이 매우 중요하다. 이러한 이유 때문에 종종 알고리즘에 추가 정보를 준다. 예를 들어, HMM 기반의 음성 인식의 경우, HMM의 구조가 사람에 의해 설정되고 오직 emission ($B$)와 0이 아닌(non-zero) transition 확률 ($A$)만 observation sequences의 집합 $O$를 통해 학습된다.
