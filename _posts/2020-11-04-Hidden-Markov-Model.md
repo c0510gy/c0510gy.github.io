@@ -9,7 +9,7 @@ modify_date: 2020-11-04 21:00
 key: post-2020110402
 ---
 
-해당 글은 스탠포드 대학의 Speech and Language Processing (by Daniel Jurafsky & James H. Martin) 글 중 일부를 직접 번역 및 정리한 내용이다.
+해당 글은 스탠포드 대학의 Speech and Language Processing (by Daniel Jurafsky & James H. Martin) 글 중 일부를 직접 번역 및 정리한 내용이다. [original](https://web.stanford.edu/~jurafsky/slp3/A.pdf)
 
 ## 1. Markov Chains
 
