@@ -23,7 +23,7 @@ This is c0510gy's blog.
 * email: ggj06281@kookmin.ac.kr
 
 ### 2. Activities / Honors ans Awards
-- Current Overall GPA 4.47 / 4.5 (~ 2020 spring semester)
+- Current Overall GPA 4.48 / 4.5 (~ 2020 fall semester)
     - Major GPA 4.5 / 4.5
 - Software Engineer intern at the Riderdash (Jun 2020 - now)
     - Web development: Used TypeScript, React.js, Redux.js, Apollo + GraphQL
