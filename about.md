@@ -32,6 +32,8 @@ This is c0510gy's blog.
     - Similarity hashing methods (LSH, simhash)
     - Aging Bloom filter
     - NetFlow
+- 2020  ACM-ICPC Asia Seoul Regional Contest 15th place
+    - 365 teams participated, only 60 teams advanced to Regional Contest.
 - 2020  ICPC Seoul Regional Preliminary Contest 33rd place
     - 365 teams participated nationwide
     - 1st place among teams from Kookmin Univ. (11 teams participated from Kookmin University)
