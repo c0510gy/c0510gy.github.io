@@ -12,7 +12,7 @@ email: ggj06281@kookmin.ac.kr
 website: c0510gy.github.io
 
 # Dark Mode (true/false/never)
-darkmode: false
+darkmode: never
 
 # Social links
 #twitter_username: facespics
