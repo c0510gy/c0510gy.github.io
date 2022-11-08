@@ -51,7 +51,7 @@ additional_links:
 # about_title: About Me
 about_profile_image: images/profile.jpeg
 about_content: | # this will include new lines to allow paragraphs
-  I'm a prospective Ph.D. student currently working at Bio-Inspired Architecture and Systems Lab (BIASLab) of Computer Science department at University of California, Irvine with professor Mohsen Imani.
+  I'm a prospective Ph.D. student currently working at Bio-Inspired Architecture and Systems Lab ([BIASLab](http://moimani.weebly.com/)) of Computer Science department at University of California, Irvine with professor Mohsen Imani.
 
   I am interested in machine learning and hyperdimensional computing.
 
