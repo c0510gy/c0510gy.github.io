@@ -80,6 +80,15 @@ content:
         image: images/kmu_emblem.png
         caption: 2019 - Jun, 2020
 
+  - title: Work Experience
+    layout: list2
+    content:
+      - layout: left
+        title: RiderDash
+        sub_title: Software Engineer
+        image: images/riderdash_logo.png
+        caption: Jun, 2020 - Aug, 2021
+
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
     content:
