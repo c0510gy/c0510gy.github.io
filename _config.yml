@@ -32,7 +32,7 @@ youtube_username: anu9Jk86eTv8OE_7TjSElg
 # Additional icon links
 additional_links:
   - title: Blog
-    icon: fa-blog
+    icon: far fa-blog
     url: https://c0510gy.github.io/blog/
   - title: resume/CV
     icon: far fa-file
