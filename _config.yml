@@ -48,11 +48,38 @@ additional_links:
 # about_title: About Me
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  I'm a prospective Ph.D. student currently working at Bio-Inspired Architecture and Systems (BIASLab) of Computer Science and Engineering department at University of California, Irvine with professor Mohsen Imani.
+  I'm a prospective Ph.D. student currently working at Bio-Inspired Architecture and Systems Lab (BIASLab) of Computer Science department at University of California, Irvine with professor Mohsen Imani.
 
   I am interested in machine learning and hyperdimensional computing.
 
 content:
+  - title: Research Experience
+    layout: list
+    content:
+      - layout: left
+        title: Bio-Inspired Architecture and Systems (BIASLab), University of California Irvine
+        sub_title: Undergraduate Research Intern
+        image: images/uci_emblem.png
+        caption: Jan, 2022 - Present
+
+      - layout: left
+        title: Human-Computer Interaction Laboratory (HCIL), Seoul National University
+        sub_title: Undergraduate Research Intern
+        image: images/snu_emblem.png
+        caption: Jun, 2022 - Oct, 2022
+
+      - layout: left
+        title: Natural Language Processing Laboratory, Kookmin University
+        sub_title: Undergraduate Research Intern
+        image: images/kmu_emblem.png
+        caption: Dec, 2021 - Jun, 2022
+
+      - layout: left
+        title: Information Security Lab, Kookmin University
+        sub_title: Undergraduate Research Intern
+        image: images/kmu_emblem.png
+        caption: 2019 - Jun, 2020
+
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
     content:
