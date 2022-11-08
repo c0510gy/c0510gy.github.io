@@ -25,14 +25,14 @@ github_username: c0510gy
 linkedin_username: sang-geon-yun
 # xing_username: jekyll
 # pinterest_username: jekyll
-youtube_username: anu9Jk86eTv8OE_7TjSElg
+youtube_username: channel/UCanu9Jk86eTv8OE_7TjSElg
 # googleplus_username: +jekyll
 # orcid_username: 0000-0000-0000-0000
 
 # Additional icon links
 additional_links:
   - title: Blog
-    icon: far fa-blog
+    icon: fa fa-blog
     url: https://c0510gy.github.io/blog/
   - title: resume/CV
     icon: far fa-file
