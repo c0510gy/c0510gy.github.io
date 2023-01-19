@@ -60,8 +60,16 @@ content:
     layout: list2 # Type of content section (list/text)
     content:
       - layout: left
+        title: University of California, Irvine
+        caption: (Anticipated) Aug. 2023 ~
+        sub_title: Ph.D. Student in Computer Science (Anticipated enrollment at Fall 2023)
+        image: images/uci_emblem.png
+        description: |
+          Bio-Inspired Architecture and Systems Lab ([BIASLab](http://moimani.weebly.com/))
+
+      - layout: left
         title: Kookmin University
-        caption: Expected Mar. 2023
+        caption: Mar. 2019 ~ Feb. 2023
         sub_title: Bachelor of Computer Science
         image: images/kmu_emblem.png
         description: |
