@@ -7,7 +7,7 @@ version: 2
 
 # Personal info
 name: Sanggeon Yun
-title: Prospective PhD Student
+title: CS Ph.D. Student
 email: sanggeoy@uci.edu # ggj06281@kookmin.ac.kr
 website: c0510gy.github.io
 
@@ -51,9 +51,11 @@ additional_links:
 # about_title: About Me
 about_profile_image: images/profile_.jpeg
 about_content: | # this will include new lines to allow paragraphs
-  I'm a prospective Ph.D. student currently working at Bio-Inspired Architecture and Systems Lab ([BIASLab](http://moimani.weebly.com/)) of Computer Science department at University of California, Irvine with professor Mohsen Imani.
+  LOVE to solve challenging problems!
 
-  I am interested in machine learning and hyperdimensional computing.
+  I'm conducting an advanced research study focused on addressing key limitations associated with neural network-based models. Specifically, my research aims to overcome challenges related to the lack of transparency, absence of commonsense reasoning, susceptibility to hardware noise, and excessive power consumption. To achieve this, I'm introducing HDC (Hyperdimensional Computing) as an innovative approach within Bio-Inspired Architecture and Systems Lab ([BIASLab](http://moimani.weebly.com/)) as a Ph.D. student of the Computer Science department at the University of California, Irvine with Professor Mohsen Imani. Through this cutting-edge research, I'm working towards revolutionizing the field and paving the way for enhanced and more efficient computational models.
+
+  Also interested in competitive programming(solving problems using algorithms & data structure).
 
 content:
   - title: Education # Title for the section
@@ -61,11 +63,13 @@ content:
     content:
       - layout: left
         title: University of California, Irvine
-        caption: (Anticipated) Aug. 2023 ~
-        sub_title: Ph.D. Student in Computer Science (Anticipated enrollment at Fall 2023)
+        caption: July. 2023 ~
+        sub_title: Ph.D. Student in Computer Science
         image: images/uci_emblem.png
         description: |
           Bio-Inspired Architecture and Systems Lab ([BIASLab](http://moimani.weebly.com/))
+
+          ICS Dean's Recruitment Fellowship
 
       - layout: left
         title: Kookmin University
@@ -75,18 +79,26 @@ content:
         description: |
           GPA: 4.49 / 4.5, Major GPA: 4.5 / 4.5
 
-          Graduate with the highest honor (1st / 97, 수석졸업)
+          Graduate with the highest honor (1st / 97 in College of Computer Science, 수석졸업)
           
-          Achievement Award (대내외공로상)
+          Graduate with Achievement Award (대내외공로상)
+
+          4 years full scholarship (Merit-based undergraduate scholarships, 특기자 4년 전액 장학금)
 
   - title: Research Experience
     layout: list2
     content:
       - layout: left
         title: Bio-Inspired Architecture and Systems (BIASLab), University of California Irvine
+        sub_title: Graduate Student Researcher
+        image: images/biaslab_icon.png
+        caption: Jul, 2023 - Present
+
+      - layout: left
+        title: Bio-Inspired Architecture and Systems (BIASLab), University of California Irvine
         sub_title: Undergraduate Research Intern
         image: images/uci_emblem.png
-        caption: Jan, 2022 - Present
+        caption: Jan, 2022 - Jul, 2023
 
       - layout: left
         title: Human-Computer Interaction Laboratory (HCIL), Seoul National University
