@@ -7,7 +7,7 @@ version: 2
 
 # Personal info
 name: Sanggeon Yun (sɑŋɡʌn jun) | 윤상건
-title: CS Ph.D. Student @ UC Irvine
+title: CS Ph.D. Candidate @ UC Irvine
 email: sanggeoy@uci.edu # ggj06281@kookmin.ac.kr
 website: c0510gy.github.io
 
@@ -54,7 +54,7 @@ about_profile_image: images/profile3.png
 about_content: | # this will include new lines to allow paragraphs
   LOVE to solve challenging problems!
 
-  I'm conducting an advanced research study focused on addressing key limitations associated with neural network-based models. Specifically, my research aims to overcome challenges related to the lack of transparency, absence of commonsense reasoning, susceptibility to hardware noise, and excessive power consumption. To achieve this, I'm introducing HDC (Hyperdimensional Computing) as an innovative approach within the Bio-Inspired Architecture and Systems Lab ([BIASLab](https://biaslab.ics.uci.edu/)) as a Ph.D. student of the Computer Science department at the University of California, Irvine under Professor Mohsen Imani. Through this cutting-edge research, I'm hoping to contribute in a step towards revolutionizing the field and paving the way for enhanced and more efficient computational models.
+  I'm conducting an advanced research study focused on addressing key limitations associated with neural network-based models. Specifically, my research aims to overcome challenges related to the lack of transparency, absence of commonsense reasoning, susceptibility to hardware noise, and excessive power consumption. To achieve this, I'm introducing HDC (Hyperdimensional Computing) as an innovative approach within the Bio-Inspired Architecture and Systems Lab ([BIASLab](https://biaslab.ics.uci.edu/)) as a Ph.D. Candidate of the Computer Science department at the University of California, Irvine under Professor Mohsen Imani. Through this cutting-edge research, I'm hoping to contribute in a step towards revolutionizing the field and paving the way for enhanced and more efficient computational models.
 
   Also interested in competitive programming(solving problems using algorithms & data structure).
 
@@ -65,10 +65,10 @@ content:
       - layout: left
         title: University of California, Irvine
         caption: July. 2023 ~
-        sub_title: Ph.D. Student in Computer Science
+        sub_title: Ph.D. Candidate in Computer Science
         image: images/uci_emblem.png
         description: |
-          GPA: 4.0 / 4.0
+          GPA: 3.99 / 4.0
 
           Bio-Inspired Architecture and Systems Lab ([BIASLab](https://biaslab.ics.uci.edu/))
 
