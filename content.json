@@ -1,0 +1,582 @@
+{
+  "schemaVersion": 1,
+  "site": {
+    "title": "Sanggeon Yun — Academic CV",
+    "description": "Sanggeon Yun is a Ph.D. candidate in Computer Science at UC Irvine, researching efficient and robust machine learning, quantum machine learning, hyperdimensional computing, neuro-symbolic AI, and edge computing.",
+    "url": "https://sanggeon.com/",
+    "sectionTitles": {
+      "about": "About me",
+      "researchInterests": "Research interests",
+      "education": "Education",
+      "publications": "Publications",
+      "honors": "Honors & awards"
+    },
+    "publicationLabel": "selected publications",
+    "publicationNote": "* Equal contribution"
+  },
+  "profile": {
+    "name": "Sanggeon Yun",
+    "pronunciation": "sɑŋɡʌn jun",
+    "nativeName": "윤상건",
+    "nativeNameLanguage": "ko",
+    "role": "Ph.D. candidate · Computer Science",
+    "affiliation": "University of California, Irvine",
+    "lab": "Bio-Inspired Architecture and Systems Laboratory",
+    "email": "sanggeoy@uci.edu",
+    "publicationAuthorName": "S. Yun",
+    "portrait": {
+      "src": "assets/profile.webp",
+      "alt": "Sanggeon Yun"
+    },
+    "links": [
+      {
+        "label": "Email",
+        "url": "mailto:sanggeoy@uci.edu",
+        "icon": "mail"
+      },
+      {
+        "label": "Google Scholar",
+        "url": "https://scholar.google.com/citations?user=Qw2sWuMAAAAJ",
+        "icon": "scholar"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/Sang-geon-Yun",
+        "icon": "linkedin"
+      },
+      {
+        "label": "Blog",
+        "url": "https://sanggeon.com/blog/",
+        "icon": "blog"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/c0510gy",
+        "icon": "github"
+      },
+      {
+        "label": "CV",
+        "url": "cv.html",
+        "icon": "paper"
+      }
+    ]
+  },
+  "cv": {
+    "title": "Curriculum vitae",
+    "description": "View my full academic CV below.",
+    "googleDriveFileId": "1LhoWyRC6YKXsxjudRj8PFXEN6aSUfwJE"
+  },
+  "about": [
+    "**Sanggeon Yun** is a Ph.D. candidate in Computer Science at the University of California, Irvine, where he conducts research in the Bio-Inspired Architecture and Systems Laboratory under the guidance of **Professor Mohsen Imani**.",
+    "His research focuses on developing **efficient and robust machine-learning systems**, spanning robust machine learning, quantum machine learning, hyperdimensional computing, neuro-symbolic AI, and edge computing. He aims to address fundamental limitations of neural network-based models, including limited transparency and commonsense reasoning, susceptibility to hardware noise, and excessive power consumption.",
+    "His work has appeared in leading venues including NeurIPS, TMLR, CVPR, WACV, ICASSP, ICCAD, DATE, and ISLPED. Outside his research, he occasionally enjoys competitive programming, solving problems using algorithms and data structures."
+  ],
+  "researchInterests": [
+    "Machine learning",
+    "RobustML",
+    "EfficientML",
+    "EdgeML",
+    "QuantumML",
+    "Hyperdimensional computing",
+    "Neuro-symbolic AI"
+  ],
+  "education": [
+    {
+      "institution": "University of California, Irvine",
+      "degree": "Ph.D. candidate in Computer Science",
+      "period": "2023–present",
+      "gpa": "3.99/4.0",
+      "highlights": [
+        "ICS Dean’s Recruitment Fellowship"
+      ]
+    },
+    {
+      "institution": "University of California, Irvine",
+      "degree": "M.S. in Computer Science",
+      "period": "2023–2025"
+    },
+    {
+      "institution": "Kookmin University",
+      "degree": "B.S. in Computer Science",
+      "period": "2019–2023",
+      "distinction": "Graduated with highest honors · Ranked 1st of 145",
+      "gpa": "4.49/4.5",
+      "majorGpa": "4.5/4.5",
+      "highlights": [
+        "Full-tuition merit scholarship",
+        "President’s Award for Outstanding Contribution"
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "id": "C.1",
+      "title": "Learning Recoverable Neural Networks against Weight Corruption via Simple Zero-Sum Projection",
+      "authors": "S. Yun, R. Masukawa, S. Jeong, H. Oh, N. Bastian, M. Imani",
+      "year": 2026,
+      "venue": "NeurIPS",
+      "type": "conference",
+      "url": "https://neurips.cc/virtual/2026/loc/atlanta/poster/155717",
+      "equalContribution": false,
+      "fullVenue": "Annual Conference on Neural Information Processing Systems",
+      "acceptanceRate": 25.7,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "J.1",
+      "title": "A Few Large Shifts: Layer-Inconsistency Based Minimal Overhead Adversarial Example Detection",
+      "authors": "S. Yun, R. Masukawa, H. Oh, N. Bastian, M. Imani",
+      "year": 2026,
+      "venue": "TMLR",
+      "type": "journal",
+      "url": "https://openreview.net/pdf?id=0xXYBxDNHA",
+      "equalContribution": false,
+      "fullVenue": "Transactions on Machine Learning Research",
+      "acceptanceRate": null,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "C.2",
+      "title": "Qubit-Efficient Quantum Search for Hyperdimensional Decomposition via Logarithmic Encoding",
+      "authors": "S. Yun, H. Oh, R. Masukawa, R. Hassan, M. Imani",
+      "year": 2026,
+      "venue": "ICCAD",
+      "type": "conference",
+      "url": "https://arxiv.org/pdf/2607.11936",
+      "equalContribution": false,
+      "fullVenue": "IEEE/ACM International Conference on Computer-Aided Design",
+      "acceptanceRate": 23.78,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "C.3",
+      "title": "FusionSense: Tri-Stage Near-Sensor Learning for Runtime-Adaptive Multimodal Edge Intelligence",
+      "authors": "S. Yun, R. Masukawa, M. Na, H. Oh, Y. Yamaguchi, W. Huang, S. Jeong, M. Imani",
+      "year": 2026,
+      "venue": "ISLPED",
+      "type": "conference",
+      "url": "https://arxiv.org/pdf/2605.22868",
+      "equalContribution": false,
+      "distinction": "Oral",
+      "fullVenue": "IEEE/ACM International Symposium on Low Power Electronics and Design",
+      "acceptanceRate": 36,
+      "oralAcceptanceRate": 24.4,
+      "extraDetail": null
+    },
+    {
+      "id": "C.4",
+      "title": "NeuroHash: A Hyperdimensional Neuro-Symbolic Framework for Spatially-Aware Image Hashing and Retrieval",
+      "authors": "S. Yun, R. Masukawa, S. Jeong, M. Imani, M. Imani",
+      "year": 2026,
+      "venue": "ICASSP",
+      "type": "conference",
+      "url": "https://arxiv.org/pdf/2404.11025",
+      "equalContribution": false,
+      "distinction": "Oral",
+      "fullVenue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "acceptanceRate": 40,
+      "oralAcceptanceRate": 7.08,
+      "extraDetail": null
+    },
+    {
+      "id": "C.5",
+      "title": "MERIT: Multi-domain Efficient RAW Image Translation",
+      "authors": "W. Huang, S. Fu, Y. Jin, Y. Ni, Z. Cui, H. Chen, Y. He, Y. Liu, S. Yun, S. Jeong, R. Masukawa, W. Y. Chung, M. Imani",
+      "year": 2026,
+      "venue": "CVPR",
+      "type": "conference",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Huang_MERIT_Multi-domain_Efficient_RAW_Image_Translation_CVPR_2026_paper.pdf",
+      "equalContribution": false,
+      "fullVenue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "acceptanceRate": 25.42,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "C.6",
+      "title": "LogHD: Robust Compression of Hyperdimensional Classifiers via Logarithmic Class-Axis Reduction",
+      "authors": "S. Yun, H. Oh, R. Masukawa, P. Mercati, N. Bastian, M. Imani",
+      "year": 2026,
+      "venue": "DATE",
+      "type": "conference",
+      "url": "https://arxiv.org/pdf/2511.03938",
+      "equalContribution": false,
+      "fullVenue": "IEEE/ACM Design Automation and Test in Europe Conference",
+      "acceptanceRate": 24.8,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "C.7",
+      "title": "DecoHD: Decomposed Hyperdimensional Classification under Extreme Memory Budgets",
+      "authors": "S. Yun, H. Oh, R. Masukawa, M. Imani",
+      "year": 2026,
+      "venue": "DATE",
+      "type": "conference",
+      "url": "https://arxiv.org/pdf/2511.03911",
+      "equalContribution": false,
+      "fullVenue": "IEEE/ACM Design Automation and Test in Europe Conference",
+      "acceptanceRate": 24.8,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "C.8",
+      "title": "QUILL: An Algorithm-Architecture Co-Design for Cache-Local Deformable Attention",
+      "authors": "H. Oh, H. Chen, S. Yun, Y. Ni, W. Huang, T. Das, S. Jang, M. Imani",
+      "year": 2026,
+      "venue": "DATE",
+      "type": "conference",
+      "url": "https://arxiv.org/pdf/2511.13679",
+      "equalContribution": false,
+      "fullVenue": "IEEE/ACM Design Automation and Test in Europe Conference",
+      "acceptanceRate": 24.8,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "C.9",
+      "title": "T-SAR: A Full-Stack Co-design for CPU-Only Ternary LLM Inference via In-Place SIMD ALU Reorganization",
+      "authors": "H. Oh, K. Nam, R. Bhattacharjya, H. Chen, T. Das, S. Yun, S. Jang, A. Ding, N. Dutt, M. Imani",
+      "year": 2026,
+      "venue": "DATE",
+      "type": "conference",
+      "url": "https://www.arxiv.org/pdf/2511.13676",
+      "equalContribution": false,
+      "fullVenue": "IEEE/ACM Design Automation and Test in Europe Conference",
+      "acceptanceRate": 24.8,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "C.10",
+      "title": "Cross-Modal Event Encoder: Bridging Image–Text Knowledge to Event Streams",
+      "authors": "S. Jeong, H. Chen, S. Yun, S. Cho, W. Huang, X. Liu, M. Imani",
+      "year": 2026,
+      "venue": "WACV",
+      "type": "conference",
+      "url": "https://arxiv.org/pdf/2412.03093",
+      "equalContribution": false,
+      "fullVenue": "IEEE/CVF Winter Conference on Applications of Computer Vision",
+      "acceptanceRate": 33,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "J.2",
+      "title": "Contextual Fusion Strategies for Multimodal GNN-based Reasoning: Performance and Computational Trade-offs",
+      "authors": "S. Yun, R. Masukawa, R. Hassan, M. Na, M. Imani",
+      "year": 2026,
+      "venue": "IEEE Access",
+      "type": "journal",
+      "url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11347011",
+      "equalContribution": false,
+      "fullVenue": "IEEE Access",
+      "acceptanceRate": null,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "C.11",
+      "title": "MissionGNN: Hierarchical Multimodal GNN-based Weakly Supervised Video Anomaly Recognition with Mission-Specific Knowledge Graph Generation",
+      "authors": "S. Yun, R. Masukawa, M. Na, M. Imani",
+      "year": 2025,
+      "venue": "WACV",
+      "type": "conference",
+      "url": "https://arxiv.org/pdf/2406.18815",
+      "equalContribution": false,
+      "fullVenue": "IEEE/CVF Winter Conference on Applications of Computer Vision",
+      "acceptanceRate": 37.8,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "C.12",
+      "title": "PV-VTT: A Privacy-Centric Dataset for Mission-Specific Anomaly Detection and Natural Language Interpretation",
+      "authors": "R. Masukawa*, S. Yun*, M. Na, M. Imani",
+      "year": 2025,
+      "venue": "WACV",
+      "type": "conference",
+      "url": "https://arxiv.org/pdf/2410.22623",
+      "equalContribution": true,
+      "fullVenue": "IEEE/CVF Winter Conference on Applications of Computer Vision",
+      "acceptanceRate": 37.8,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "J.3",
+      "title": "TriageHD: A Hyper-Dimensional Learning-to-Rank Framework for Dynamic Micro-Segmentation in Zero-Trust Network Security",
+      "authors": "R. Masukawa, S. Yun, S. Jeong, N. Bastian, M. Imani",
+      "year": 2025,
+      "venue": "IEEE Access",
+      "type": "journal",
+      "url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11096592",
+      "equalContribution": false,
+      "fullVenue": "IEEE Access",
+      "acceptanceRate": null,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "C.13",
+      "title": "TaskCLIP: Extend Large Vision-Language Model for Task Oriented Object Detection",
+      "authors": "H. Chen, W. Huang, Y. Ni, S. Yun, Y. Liu, F. Wen, A. Velasquez, H. Latapie, M. Imani",
+      "year": 2025,
+      "venue": "ECCV Workshop",
+      "type": "conference",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-031-91907-7_24",
+      "equalContribution": false,
+      "fullVenue": "European Conference on Computer Vision Workshop",
+      "acceptanceRate": null,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "J.4",
+      "title": "PacketCLIP: Multi-Modal Embedding of Network Traffic and Language for Cybersecurity Reasoning",
+      "authors": "R. Masukawa, S. Yun, S. Jeong, W. Huang, Y. Ni, I. Bryant, N. Bastian, M. Imani",
+      "year": 2025,
+      "venue": "Frontiers in Artificial Intelligence",
+      "type": "journal",
+      "url": "https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1593944/full",
+      "equalContribution": false,
+      "fullVenue": "Frontiers in Artificial Intelligence",
+      "acceptanceRate": null,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "C.14",
+      "title": "Continuous GNN-based Anomaly Detection on Edge using Efficient Adaptive Knowledge Graph Learning",
+      "authors": "S. Yun, R. Masukawa, W. Y. Chung, M. Na, N. Bastian, M. Imani",
+      "year": 2025,
+      "venue": "DATE",
+      "type": "conference",
+      "url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10993194",
+      "equalContribution": false,
+      "fullVenue": "IEEE/ACM Design Automation and Test in Europe Conference",
+      "acceptanceRate": 25,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "C.15",
+      "title": "Exploiting Boosting in Hyperdimensional Computing for Enhanced Reliability in Healthcare",
+      "authors": "S. Jeong, H. E. Barkam, S. Yun, Y. Kim, S. Angizi, M. Imani",
+      "year": 2025,
+      "venue": "DATE",
+      "type": "conference",
+      "url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10993058",
+      "equalContribution": false,
+      "fullVenue": "IEEE/ACM Design Automation and Test in Europe Conference",
+      "acceptanceRate": 25,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "J.5",
+      "title": "Hyperdimensional Intelligent Sensing for Efficient Real-Time Audio Processing on Extreme Edge",
+      "authors": "S. Yun, R. Masukawa, H. Chen, S. Jeong, W. Huang, A. Rezvani, M. Na, Y. Yamaguchi, M. Imani",
+      "year": 2025,
+      "venue": "IEEE Access",
+      "type": "journal",
+      "url": "https://ieeexplore.ieee.org/iel8/6287639/6514899/10896650.pdf",
+      "equalContribution": false,
+      "fullVenue": "IEEE Access",
+      "acceptanceRate": null,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "J.6",
+      "title": "HyperSense: Hyperdimensional Intelligent Sensing for Energy-Efficient Sparse Data Processing",
+      "authors": "S. Yun*, H. Chen*, R. Masukawa, H. E. Barkam, A. Ding, W. Huang, A. Rezvani, S. Angizi, M. Imani",
+      "year": 2024,
+      "venue": "Advanced Intelligent Systems",
+      "type": "journal",
+      "url": "https://arxiv.org/pdf/2401.10267",
+      "equalContribution": true,
+      "fullVenue": "Advanced Intelligent Systems",
+      "acceptanceRate": null,
+      "oralAcceptanceRate": null,
+      "extraDetail": "Impact factor: 7.4 · Wiley-VCH · Article 2400228"
+    },
+    {
+      "id": "C.16",
+      "title": "Reliable Hyperdimensional Reasoning on Unreliable Emerging Technologies",
+      "authors": "H. E. Barkam*, S. Yun*, P. R. Genssler, H. Chen, A. Mema, A. Ding, H. Amrouch, and M. Imani",
+      "year": 2023,
+      "venue": "ICCAD",
+      "type": "conference",
+      "url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10323935",
+      "equalContribution": true,
+      "fullVenue": "IEEE/ACM International Conference on Computer-Aided Design",
+      "acceptanceRate": 22.93,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "C.17",
+      "title": "SEE-MCAM: Scalable Multi-bit FeFET Content Addressable Memories for Energy Efficient Associative Search",
+      "authors": "S. Shou, C. Liu, S. Yun, Z. Wan, K. Ni, M. Imani, X. Sharon Hu, J. Yang, C. Zhuo, and X. Yin",
+      "year": 2023,
+      "venue": "ICCAD",
+      "type": "conference",
+      "url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10323738",
+      "equalContribution": false,
+      "fullVenue": "IEEE/ACM International Conference on Computer-Aided Design",
+      "acceptanceRate": 22.93,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "C.18",
+      "title": "Hyperdimensional Computing for Robust and Efficient Unsupervised Learning",
+      "authors": "S. Yun, H. E. Barkam, H. Latapie, P. R. Genssler, H. Amrouch, and M. Imani",
+      "year": 2023,
+      "venue": "ACSSC",
+      "type": "conference",
+      "url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10476861",
+      "equalContribution": false,
+      "fullVenue": "IEEE/ACM Asilomar Conference on Signals, Systems, and Computers",
+      "acceptanceRate": null,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "C.19",
+      "title": "HDGIM: Hyperdimensional Genome Sequence Matching on Unreliable Highly-Scaled FeFET",
+      "authors": "H. E. Barkam, S. Yun, P. R. Genssler, Z. Zou, C. Liu, H. Amrouch, and M. Imani",
+      "year": 2023,
+      "venue": "DATE",
+      "type": "conference",
+      "url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10137331",
+      "equalContribution": false,
+      "fullVenue": "IEEE/ACM Design Automation and Test in Europe Conference",
+      "acceptanceRate": 24.6,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "J.7",
+      "title": "BERT-based Logits Ensemble Model for Gender Bias and Hate Speech Detection",
+      "authors": "S. Yun, S. Kang, and H. Kim",
+      "year": 2023,
+      "venue": "JIPS",
+      "type": "journal",
+      "url": "https://jips-k.org/digital-library/manuscript/file/56222/7.pdf",
+      "equalContribution": false,
+      "fullVenue": "Journal of Information Processing Systems",
+      "acceptanceRate": null,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "C.20",
+      "title": "BERT-based Pretraining Model for Gender Bias and Hate Speech Detection",
+      "authors": "S. Yun, S. Kang, and H. Kim",
+      "year": 2022,
+      "venue": "Multimedia and Ubiquitous Engineering",
+      "type": "conference",
+      "url": null,
+      "equalContribution": false,
+      "fullVenue": "International Conference on Multimedia and Ubiquitous Engineering",
+      "acceptanceRate": null,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "C.21",
+      "title": "A Comparative Study on the Sentiment Analysis of Korean Movie Reviews by Using Various Embedding Models",
+      "authors": "S. Yun, and S. Kang",
+      "year": 2022,
+      "venue": "KMMS Spring Conference",
+      "type": "conference",
+      "url": null,
+      "equalContribution": false,
+      "fullVenue": "Spring Conference of Korea Multimedia Society",
+      "acceptanceRate": null,
+      "oralAcceptanceRate": null,
+      "extraDetail": null
+    },
+    {
+      "id": "A.1",
+      "title": "Development of encryption algorithm that encrypts data through 2nd or higher dimensional torus",
+      "authors": "S. Yun",
+      "year": 2017,
+      "venue": "Samsung Humantech Paper Award",
+      "type": "award",
+      "url": null,
+      "equalContribution": false,
+      "fullVenue": "24th Samsung Humantech Paper Award",
+      "acceptanceRate": null,
+      "oralAcceptanceRate": null,
+      "extraDetail": "Bronze prize (2nd)"
+    }
+  ],
+  "honors": [
+    {
+      "title": "KDD 2025 Outstanding Reviewer",
+      "period": "2024",
+      "description": "Recognized among the top 10% of reviewers."
+    },
+    {
+      "title": "ICS Dean’s Recruitment Fellowship",
+      "period": "2023",
+      "description": "University of California, Irvine · $20,000 fellowship"
+    },
+    {
+      "title": "Excellent Paper Presentation Award",
+      "period": "2022",
+      "description": "Korea Multimedia Society Spring Conference"
+    },
+    {
+      "title": "NAVER CLOVA AI RUSH",
+      "period": "2022",
+      "description": "Final round qualifier"
+    },
+    {
+      "title": "Full-tuition Merit Scholarship",
+      "period": "2019–2022",
+      "description": "Kookmin University · Four-year Special Talent Scholarship"
+    },
+    {
+      "title": "ACM-ICPC Asia Seoul Regional Contest",
+      "period": "2019–2020",
+      "description": "15th place in 2020; 18th place in 2019."
+    },
+    {
+      "title": "Google Code Jam Round 2 Qualifier",
+      "period": "2019–2020",
+      "description": "Top 3.3% of registrants in 2019 and top 2.0% in 2020."
+    },
+    {
+      "title": "Samsung Collegiate Programming Cup Finalist",
+      "period": "2019",
+      "description": "Among 138 finalists from more than 5,000 participants."
+    },
+    {
+      "title": "KMU Doorithon — Second Prize",
+      "period": "2019",
+      "description": "Awarded for Eye Keeper, an Android application encouraging healthier screen use."
+    },
+    {
+      "title": "Codeforces Candidate Master",
+      "description": "Peak rating: 1925 · Handle: c0510gy"
+    },
+    {
+      "title": "Samsung Humantech Paper Award — Bronze Prize",
+      "period": "2017",
+      "description": "Single-authored research on encryption using higher-dimensional tori."
+    },
+    {
+      "title": "Korea Olympiad in Informatics — Bronze Prize",
+      "period": "2017",
+      "description": "National Contest"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Academic curriculum vitae">
+  <title>Curriculum vitae</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/source-sans-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/lora-medium.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cv.css">
+  <script src="cv.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to CV</a>
+  <p id="cv-loading" class="content-message" role="status">Loading CV…</p>
+  <div id="cv-error" class="content-message" role="alert" hidden>
+    <p>The CV page could not be loaded. Please try again, or open the PDF directly.</p>
+    <button id="cv-retry" type="button">Retry</button>
+    <a href="https://drive.google.com/file/d/1LhoWyRC6YKXsxjudRj8PFXEN6aSUfwJE/view" target="_blank" rel="noopener noreferrer">Open in Google Drive</a>
+  </div>
+  <noscript><style>#cv-loading { display: none; }</style><p class="content-message">Please enable JavaScript to view the embedded CV, or <a href="https://drive.google.com/file/d/1LhoWyRC6YKXsxjudRj8PFXEN6aSUfwJE/view">open the PDF in Google Drive</a>.</p></noscript>
+  <div class="page cv-page" id="cv-page" hidden>
+    <header class="cv-header">
+      <a class="cv-back" href="./">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m10 5-7 7 7 7M3 12h18"/></svg>
+        <span id="cv-profile-name"></span>
+      </a>
+      <a id="cv-source" class="cv-source" target="_blank" rel="noopener noreferrer">
+        Open in Google Drive
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+    </header>
+    <main id="main">
+      <div class="cv-intro">
+        <h1 id="cv-title"></h1>
+        <p id="cv-description"></p>
+      </div>
+      <div class="cv-document">
+        <iframe id="cv-frame" title="Curriculum vitae PDF" allowfullscreen></iframe>
+      </div>
+      <p class="cv-help">If the PDF doesn’t appear, <a id="cv-fallback" target="_blank" rel="noopener noreferrer">open it in Google Drive</a>.</p>
+    </main>
+  </div>
+</body>
+</html>

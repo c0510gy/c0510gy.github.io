@@ -1,172 +1,169 @@
-# modern-resume-theme [![Gem Version](https://badge.fury.io/rb/modern-resume-theme.svg)](https://badge.fury.io/rb/modern-resume-theme) ![CI workflow](https://github.com/sproogen/modern-resume-theme/workflows/CI%20workflow/badge.svg?branch=master)
+# Sanggeon Yun — Academic CV
 
-*A modern simple static resume template and theme. Powered by Jekyll and GitHub pages.*  
-*Host your own resume on GitHub for **free!***
+A responsive academic website with About me, Research interests, Education, Publications, and Honors & awards, plus a dedicated CV page showing the Google Drive PDF. All editable profile content and CV settings live in **`content.json`**. No build step or JavaScript edits are needed to change the content.
 
-[View Demo](https://sproogen.github.io/modern-resume-theme/)
+## Update the website on GitHub
 
-----
+The site is published at [sanggeon.com](https://sanggeon.com/) from the `master` branch, using the repository root (`/`) as the GitHub Pages publishing source.
 
-## Announcements
+1. Open [content.json in the GitHub editor](https://github.com/c0510gy/c0510gy.github.io/edit/master/content.json).
+2. Edit the relevant values, using the field guide below. Keep the JSON valid, including commas and quotation marks.
+3. Choose **Commit changes** and save the change to `master`.
+4. Check the repository’s [Actions page](https://github.com/c0510gy/c0510gy.github.io/actions) for the Pages deployment, then refresh the website after it succeeds.
 
- - **Nov 2020** - Content configuration version 2 released. Added a new more configurable way of adding data to the resume. Add as many content sections as you like in what ever order you want. Currently just *text* and *list* but future categories coming soon.
-Full backwards compatibilty with version 1 remains and the documentation for version 1 can be found [here (Version 1 Readme)](https://github.com/sproogen/modern-resume-theme/blob/1.x/README.md).
+Committing changes to the publishing branch updates the website automatically. There is no build command or separate upload step.
 
- - **Dec 2019** - Now includes **Dark Mode**
+## Edit and preview locally
 
-----
+From a local checkout of this repository on `master`, fetch the latest changes before editing:
 
-![img](screenshot.png)
-
-Thank you for checking out my resume theme / template. If you have any feedback or suggestions for things I can add please let me know by by raising an [issue](https://github.com/sproogen/modern-resume-theme/issues/new/choose), I'm always happy to help.
-
-I always enjoy seeing how people are using my creations and if you would like to say thanks feel free to [buy me a coffee (buymeacoffee.com/vJ6HfLu)](https://buymeacoff.ee/vJ6HfLu).
-
-If you would like to see how I am using this then you can view my resume [here (jameswgrant.co.uk)](http://www.jameswgrant.co.uk/) and find the code [here (sproogen/jameswgrant)](https://github.com/sproogen/jameswgrant), hopefully this might help you.
-
-You can view the project [roadmap here](https://github.com/sproogen/modern-resume-theme/projects/1).
-
-----
-
-## Installation & setup guide
-This template is designed to be hosted using GitHub pages and so that's what these instructions will cover. If you plan on hosting it seperately then there might be some extra steps that we wont cover.
-
-Before starting it might be useful to familiarise yourself with [Jekyll](https://jekyllrb.com/docs/home/), [Markdown](https://www.markdownguide.org/getting-started) and [GitHub pages](https://pages.github.com/).
-
-### Step 1 - GitHub
-Start by creating an account on [GitHub](https://github.com/join)
-
-### Step 2 - Create Repository
-Create a repository on GitHub to hold your files and host your resume. You can find out how to do that [here](https://pages.github.com/)
-
-### Step 3 - Download Resume Template
-Download and extract the following zip into the git repository you have just created. [resume-template.zip](https://github.com/sproogen/modern-resume-theme/archive/gh-pages.zip)
-
-### Step 4 - Push it
-Commit and push the resume template to github
-```
-$ git add --all
-$ git commit -m "Initial resume setup"
-$ git push -u origin master
-```
-### Step 5 - See it
-You should now be able to see the demo resume template using this theme at `[your-username].github.io`
-
-----
-
-## Usage
-
-So now you will be able to see the demo template at your github URL. You can can edit the yml files and replace the demo content with your own. Hopefully it will be fairly simple to work out where all the content goes, but here is a quick overview.
-
-### `_config.yml`
-This will contain all the of the main configuration for your resume such as your name, email, social media links and about me content. It also contains all the content for your resume.  
-A full example of the _config.yml can be found [here](https://github.com/sproogen/modern-resume-theme/blob/master/_config.yml)
-
-#### Content
-The main content for you resume will all come under the content property in the `_config.yml` file. This can be quite complex and a good understanding on [YAML](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html) will be helpful here.
-
-Content will contain an array of sections, there are currently 2 types of layouts for content sections, text and list.
-
-**text** is a basic layout that contains markdown content.  
-**list** is a the standard layout that is used for things like *Education* and *Experience*.
-
-Below is a the full list of content options.
-```
-content:
-  - title: Section Name
-    layout: list (options: list, text)
-    content:
-      - layout: left (options: left, right, top, top-right, top-middle)(default: left)
-        title: Name of item (eg. Company or Project name)
-        sub_title: Sub title (eg. Qualification or Job title)(optional)
-        caption: Item caption (eg. Employment or course dates)(optional)
-        link: Web link (eg. https://sproogen.github.io/modern-resume-theme)(optional)
-        link_text: Text for link (optional: without this link will show URL as link text)
-        additional_links: (optional)
-          - title: Link name
-            icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
-            url: Link url (eg. https://google.com)
-        quote: >
-          Short overview or quote for the item
-        description: | # this will include new lines to allow paragraphs
-          Main content area for the list item.
-  - title: Section Name
-    layout: text (options: list, text)
-    content: | # this will include new lines to allow paragraphs
-      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
-
-      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
+```sh
+git pull --ff-only origin master
 ```
 
-***Note:** The description or content areas (fields starting with `| #`) use markdown, this means that you have the ability to format the section in many different ways and add things such as images, code & syntax highlighting and tables. You can find a good [Markdown cheatsheet here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)*
+1. Open `content.json` in a text editor, change the relevant values, and save it.
+2. From the repository root, check the JSON syntax:
 
-#### Additional links
-If you would like to add more than the predefined social links in the config file, then you can use the `additional_links` field to add as many additional links with urls and font awesome icons as you wish.
+   ```sh
+   python3 -m json.tool content.json > /dev/null
+   ```
 
-#### Dark Mode
-Dark mode is configured via `_config.yml`  
+3. Start a local server from the same directory:
+
+   ```sh
+   python3 -m http.server 4173 --bind 127.0.0.1
+   ```
+
+4. Open [the local preview](http://127.0.0.1:4173) and refresh after each edit. The page reads the JSON on every load. Use the HTTP preview; opening `index.html` directly as a file does not reliably allow the browser to load JSON.
+
+The syntax check catches malformed JSON. The webpage also validates field types, required values, duplicate publication IDs, links, and rates. If the page shows a content-loading error, inspect the browser console for the field to fix, save the correction, and retry.
+
+After checking the preview, review, commit, and push your changes:
+
+```sh
+git diff
+git add content.json
+git commit -m "Update academic CV"
+git push origin master
 ```
-darkmode: true (options: true, false, never)
+
+Add any other files you intentionally edited to the `git add` command. Local edits become public after they are pushed and the GitHub Pages deployment succeeds. GitHub authentication and repository write access are required to push.
+
+Keep `.nojekyll` in the repository root so the files are published directly. Keep `CNAME` set to `sanggeon.com` and `site.url` set to `https://sanggeon.com/` unless you are deliberately changing the domain. The Pages publishing source should remain **Deploy from a branch → master → /(root)**.
+
+## Content fields
+
+Keep `schemaVersion` set to `1` and preserve the top-level keys. Arrays can be empty, but must remain arrays. Education, honors, profile links, research interests, and About me paragraphs appear in their JSON order. Publications are sorted by descending year, preserving JSON order within each year.
+
+| Key | What to edit |
+| --- | --- |
+| `site` | `title`, `description`, `url`, the five labels in `sectionTitles`, `publicationLabel` (currently “selected publications”), and `publicationNote` (currently “* Equal contribution”). The count itself is calculated automatically. |
+| `profile` | Name, pronunciation, Korean name and language, role, affiliation, lab, email, portrait, profile links, and the author name to bold in publications. |
+| `cv` | CV page title, introductory description, and the Google Drive PDF file ID. |
+| `about` | One string per paragraph. Use `**text**` for bold. Other Markdown and HTML are not interpreted. |
+| `researchInterests` | One string per compact interest label. |
+| `education` | Institution, degree, period, GPAs, distinction, and academic highlights. |
+| `publications` | One object per paper, including its authors, venue, year, links, and optional acceptance details. |
+| `honors` | One object per award or achievement, with its title and optional period and description. |
+
+JSON uses double quotes, commas between entries, and no trailing commas or comments. Numbers and booleans are unquoted. Escape a double quote inside text as `\"`. Optional fields may be omitted or set to `null`; do not use an empty string for them. Required strings must be non-empty.
+
+### Profile and links
+
+`profile.name`, `role`, `affiliation`, `email`, and the `links` array are required. `pronunciation`, `nativeName`, `nativeNameLanguage`, `lab`, `publicationAuthorName`, and `portrait` are optional. Use `"nativeNameLanguage": "ko"` for Korean text. Set `portrait` to `null` to remove the photo, or supply both `src` and `alt`.
+
+`profile.publicationAuthorName` is currently `"S. Yun"`. The renderer bolds matching text and an immediately following `*` in each author list. If the author format changes, update this value too. For equal contribution, put `*` directly after the relevant names in `authors`; `equalContribution` is retained as metadata and does not insert stars automatically.
+
+Each profile link needs `label` and `url`; `icon` and the boolean `download` are optional. Supported icons are `mail`, `scholar`, `linkedin`, `blog`, `github`, `download`, `user`, `research`, `paper`, `award`, `arrow`, and `location`. An omitted icon uses an arrow. Links accept HTTPS, HTTP, and relative paths; profile links also accept `mailto:`. Use paths such as `assets/Sanggeon-Yun-CV.pdf` relative to the repository root. Update the Email link as well as `profile.email` when changing your address.
+
+### Embedded CV
+
+The profile's **CV** link opens `cv.html`, which displays the PDF through Google Drive's embedded viewer. The surrounding page uses the same fonts and styling as the academic profile. A direct **Open in Google Drive** link remains available if a browser cannot display the embedded viewer.
+
+```json
+"cv": {
+  "title": "Curriculum vitae",
+  "description": "View my full academic CV below.",
+  "googleDriveFileId": "1LhoWyRC6YKXsxjudRj8PFXEN6aSUfwJE"
+}
 ```
-When dark mode is `true` the site will show the dark theme for everyone  
-When dark mode is `false` the site will not show the dark theme, but it will still respect the users device preferences  
-When dark mode is `never` the site will never be shown in the dark theme
 
-#### Heading Anchors
-You can link to section titles using a Markdown anchor link, e.g.: `[About me](#about-me)`. The link after the `#` is the slug version of the title.
+Use the file ID between `/d/` and `/view` in the Google Drive sharing URL. The page derives both the preview and direct-view URLs from this one value. `title` and `googleDriveFileId` are required; `description` may be omitted or set to `null`. The PDF's sharing settings must allow visitors to view it.
 
-### `assets/main.scss`
-Add any css changes or additions you want to make here after the line `@import 'modern-resume-theme';`
+Replacing the PDF's contents in Google Drive while retaining the same file ID updates the embedded document without redeploying this website. If the file ID changes, update the JSON and commit the change to `master`. The no-JavaScript fallback links in `index.html` and `cv.html` are static, so update those too when changing the document. Editing the profile JSON does not edit the PDF itself.
 
-----
+Google Scholar remains a profile link. No citation snapshot, chart, or automatic citation fetching is implemented.
 
-## Running locally
+### Add or edit education
 
-Before you start make sure you have *Ruby* and the gems for *Jekyll* installed locally. You can find out how to do that [here](https://jekyllrb.com/docs/installation/).
+Copy an object inside `education`, separate entries with a comma, then change its values. `institution`, `degree`, and `period` are required. `gpa`, `majorGpa`, `distinction`, and `highlights` are optional; `highlights` is an array of strings.
 
-1. Clone your resume repository locally *(if you haven't already)*
-2. `cd [your-repository-name]`
-3. `bundle install`
-4. `bundle exec jekyll serve`
-5. Open your browser to `http://localhost:4000`
+```json
+{
+  "institution": "Kookmin University",
+  "degree": "B.S. in Computer Science",
+  "period": "2019–2023",
+  "gpa": "4.49/4.5",
+  "majorGpa": "4.5/4.5",
+  "distinction": "Graduated with highest honors · Ranked 1st of 145",
+  "highlights": ["Full-tuition merit scholarship"]
+}
+```
 
-Any changes you make will automatically build and you will be able to see these by refreshing your browser.
+GPA values are automatically bold. Education distinctions and highlights use dark red. Honors & awards titles use bold black, even when the same award also appears under Education.
 
-*Note: You will need to re-run `bundle exec jekyll serve` to see changes made in `_config.yml`.*
+### Add a publication
 
-----
+Add an object inside `publications`, using a unique `id`. This is a template to replace with the paper's actual details:
 
-## Contributing
+```json
+{
+  "id": "C.22",
+  "title": "Your paper title",
+  "authors": "S. Yun, A. Collaborator",
+  "year": 2027,
+  "venue": "VENUE",
+  "fullVenue": "Full Conference or Journal Name",
+  "type": "conference",
+  "url": null,
+  "equalContribution": false,
+  "acceptanceRate": null,
+  "oralAcceptanceRate": null,
+  "extraDetail": null
+}
+```
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/sproogen/modern-resume-theme. You can view our full guide to contributing [here](https://github.com/sproogen/modern-resume-theme/blob/master/CONTRIBUTING.md)
-This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+`id`, `title`, `authors`, `venue`, and `type` are required. Published records also require a positive integer `year`. Supported types are `conference`, `journal`, `award`, and `preprint`. Records with `"type": "preprint"` are excluded from the page and its automatic publication count. An accepted paper may still link to arXiv; its type determines whether it is shown.
 
-----
+Use `venue` for the short name, or the complete name when no abbreviation is used, such as `IEEE Access`. It appears bold and blue. A different `fullVenue` appears in italic parentheses; omit it or repeat `venue` to avoid showing a second name.
 
-## Development
+Optional fields are `url`, `fullVenue`, `distinction`, `acceptanceRate`, `oralAcceptanceRate`, `equalContribution`, and `extraDetail`. Use `"distinction": "Oral"` to display the compact dark-red “Oral presentation” label. Rates are numbers from 0 to 100 without a percent sign: `25.7`, not `"25.7%"`. Missing or `null` rates are hidden. Use `extraDetail` for information such as an impact factor or award note. Omit `url` or set it to `null` when no paper link is available.
 
-### Locally
+### Add an honor or award
 
-Before you start make sure you have *Ruby* and the gems for *Jekyll* installed locally. You can find out how to do that [here](https://jekyllrb.com/docs/installation/).
+Add an object inside `honors`. Only `title` is required; `period` and `description` may be omitted or `null`.
 
-*Note: You will need version `1.15.2` of bundler, as this is the only version that Heroku supports.*
+```json
+{
+  "title": "ICS Dean’s Recruitment Fellowship",
+  "period": "2023",
+  "description": "University of California, Irvine · $20,000 fellowship"
+}
+```
 
-1. Fork and or clone this repository locally
-2. `cd modern-resume-theme`
-3. `bundle install`
-4. `bundle exec jekyll serve`
-5. Open your browser to `http://localhost:4000`
+## Files and sources
 
-Any changes you make will automatically build and you will be able to see these by refreshing your browser. To find out more about *Jekyll* take a look [here](https://jekyllrb.com/docs/usage/).
+- `.nojekyll`: tells GitHub Pages to publish the static files directly.
+- `CNAME`: retains the `sanggeon.com` custom domain.
+- `content.json`: editable content and publication data.
+- `index.html`: page structure, icon definitions, and loading/error states.
+- `app.js`: content loading, validation, and rendering.
+- `cv.html`, `cv.js`, `cv.css`: embedded Google Drive CV page, loading/error states, and responsive viewer styling.
+- `styles.css`: typography, black body text, blue venue names, dark-red education and oral highlights, responsive layout, and print styling.
+- `assets/Sanggeon-Yun-CV.pdf`: the original local CV archive; the website's CV link now opens the Google Drive viewer.
+- `assets/profile.webp`: optimized portrait sourced from the author’s previous website. Only orientation, size, and encoding were adjusted; portrait framing is CSS.
+- `assets/fonts/`: locally hosted Lora and Source Sans 3 fonts, with their SIL Open Font License notices.
 
-***Note:** You will need to re-run `bundle exec jekyll serve` to see changes made in `_config.yml`.*
+Publication data comes from the supplied September 2026 CV: 29 non-preprint records (21 conference papers, 7 journal papers, and 1 awarded paper), including 17 supplied acceptance rates and 2 oral acceptance rates. Missing rates are omitted. The source's repeated M. Imani in NeuroHash, TaskCLIP's ECCV 2025 Workshop entry, and the 2024 date on KDD 2025 Outstanding Reviewer are preserved for the author to review.
 
-### Docker
-
-If you have docker installed you can simply run `docker-compose up` to launch the site in a container, it will then be hosted at `http://localhost:4000`
-
-----
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The archived local PDF remains unchanged and includes additional experience, service, teaching, projects, technical skills, and preprints. Its BIASLab undergraduate internship end date has a source typo; the author confirmed July 2023. The embedded CV uses the separately maintained Google Drive document.
