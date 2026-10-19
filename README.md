@@ -152,7 +152,7 @@ Add an object inside `honors`. Only `title` is required; `period` and `descripti
 }
 ```
 
-Descriptions support `**text**` markup, as About me paragraphs do. Mark award amounts, percentages, rankings, or selection counts to display them in bold blue—for example, `**$20,000**`, `**top 10%**`, or `**1st of 145**`. Other Markdown and HTML are not interpreted. Award titles remain bold black.
+Descriptions support `**text**` markup, as About me paragraphs do. Mark award amounts, percentages, rankings, or selection counts to display them in bold dark red—for example, `**$20,000**`, `**top 10%**`, or `**1st of 145**`. Other Markdown and HTML are not interpreted. Award titles remain bold black.
 
 ## Files and sources
 
@@ -162,7 +162,7 @@ Descriptions support `**text**` markup, as About me paragraphs do. Mark award am
 - `index.html`: page structure, icon definitions, and loading/error states.
 - `app.js`: content loading, validation, and rendering.
 - `cv.html`, `cv.js`, `cv.css`: embedded Google Drive CV page, loading/error states, and responsive viewer styling.
-- `styles.css`: typography, black body text, blue venue names and award metrics, dark-red education and oral highlights, responsive layout, and print styling.
+- `styles.css`: typography, black body text, blue venue names, dark-red award metrics, education and oral highlights, responsive layout, and print styling.
 - `assets/Sanggeon-Yun-CV.pdf`: the original local CV archive; the website's CV link now opens the Google Drive viewer.
 - `assets/profile.webp`: optimized portrait sourced from the author’s previous website. Only orientation, size, and encoding were adjusted; portrait framing is CSS.
 - `assets/fonts/`: locally hosted Lora and Source Sans 3 fonts, with their SIL Open Font License notices.
