@@ -36,7 +36,7 @@ git pull --ff-only origin master
 
 4. Open [the local preview](http://127.0.0.1:4173) and refresh after each edit. The page reads the JSON on every load. Use the HTTP preview; opening `index.html` directly as a file does not reliably allow the browser to load JSON.
 
-The syntax check catches malformed JSON. The webpage also validates field types, required values, duplicate publication IDs, links, and rates. If the page shows a content-loading error, inspect the browser console for the field to fix, save the correction, and retry.
+The syntax check catches malformed JSON. The webpage also validates field types, required values, links, and rates. If the page shows a content-loading error, inspect the browser console for the field to fix, save the correction, and retry.
 
 After checking the preview, review, commit, and push your changes:
 
@@ -64,7 +64,7 @@ Keep `schemaVersion` set to `1` and preserve the top-level keys. Arrays can be e
 | `researchInterests` | One string per compact interest label. |
 | `education` | Institution, degree, period, GPAs, distinction, and academic highlights. |
 | `publications` | One object per paper, including its authors, venue, year, links, and optional acceptance details. |
-| `honors` | One object per award or achievement, with its title and optional period and description. |
+| `honors` | One object per award or achievement, with its title and optional period and description. Use `**text**` in descriptions to highlight competitiveness or award amounts. |
 
 JSON uses double quotes, commas between entries, and no trailing commas or comments. Numbers and booleans are unquoted. Escape a double quote inside text as `\"`. Optional fields may be omitted or set to `null`; do not use an empty string for them. Required strings must be non-empty.
 
@@ -114,11 +114,10 @@ GPA values are automatically bold. Education distinctions and highlights use dar
 
 ### Add a publication
 
-Add an object inside `publications`, using a unique `id`. This is a template to replace with the paper's actual details:
+Add an object inside `publications`. Publication labels are generated automatically; do not add an `id` or a number. This is a template to replace with the paper's actual details:
 
 ```json
 {
-  "id": "C.22",
   "title": "Your paper title",
   "authors": "S. Yun, A. Collaborator",
   "year": 2027,
@@ -133,7 +132,9 @@ Add an object inside `publications`, using a unique `id`. This is a template to 
 }
 ```
 
-`id`, `title`, `authors`, `venue`, and `type` are required. Published records also require a positive integer `year`. Supported types are `conference`, `journal`, `award`, and `preprint`. Records with `"type": "preprint"` are excluded from the page and its automatic publication count. An accepted paper may still link to arXiv; its type determines whether it is shown.
+`title`, `authors`, `venue`, and `type` are required. Published records also require a positive integer `year`. Supported types are `conference`, `journal`, `award`, and `preprint`. Records with `"type": "preprint"` are excluded from the page, publication count, and numbering. An accepted paper may still link to arXiv; its type determines whether it is shown.
+
+The page sorts publications by descending year and preserves their JSON order within the same year. It then numbers each type from the bottom of the displayed list upward: `C1`, `C2`, … for conference papers, `J1`, `J2`, … for journal papers, and `A1`, `A2`, … for awarded papers. The bottommost paper of each type receives `1`; the topmost receives that type's highest number. Adding, removing, or reordering publications updates the labels automatically.
 
 Use `venue` for the short name, or the complete name when no abbreviation is used, such as `IEEE Access`. It appears bold and blue. A different `fullVenue` appears in italic parentheses; omit it or repeat `venue` to avoid showing a second name.
 
@@ -147,9 +148,11 @@ Add an object inside `honors`. Only `title` is required; `period` and `descripti
 {
   "title": "ICS Dean’s Recruitment Fellowship",
   "period": "2023",
-  "description": "University of California, Irvine · $20,000 fellowship"
+  "description": "University of California, Irvine · **$20,000** fellowship"
 }
 ```
+
+Descriptions support `**text**` markup, as About me paragraphs do. Mark award amounts, percentages, rankings, or selection counts to display them in bold blue—for example, `**$20,000**`, `**top 10%**`, or `**1st of 145**`. Other Markdown and HTML are not interpreted. Award titles remain bold black.
 
 ## Files and sources
 
@@ -159,7 +162,7 @@ Add an object inside `honors`. Only `title` is required; `period` and `descripti
 - `index.html`: page structure, icon definitions, and loading/error states.
 - `app.js`: content loading, validation, and rendering.
 - `cv.html`, `cv.js`, `cv.css`: embedded Google Drive CV page, loading/error states, and responsive viewer styling.
-- `styles.css`: typography, black body text, blue venue names, dark-red education and oral highlights, responsive layout, and print styling.
+- `styles.css`: typography, black body text, blue venue names and award metrics, dark-red education and oral highlights, responsive layout, and print styling.
 - `assets/Sanggeon-Yun-CV.pdf`: the original local CV archive; the website's CV link now opens the Google Drive viewer.
 - `assets/profile.webp`: optimized portrait sourced from the author’s previous website. Only orientation, size, and encoding were adjusted; portrait framing is CSS.
 - `assets/fonts/`: locally hosted Lora and Source Sans 3 fonts, with their SIL Open Font License notices.

@@ -54,12 +54,9 @@
       if (entry.highlights != null) { array(entry.highlights, `${name}.highlights`); entry.highlights.forEach((text, j) => string(text, `${name}.highlights[${j}]`)); }
     });
     array(data.publications, 'publications');
-    const ids = new Set();
     data.publications.forEach((entry, i) => {
       const name = `publications[${i}]`; object(entry, name);
-      for (const key of ['id','title','authors','venue']) string(entry[key], `${name}.${key}`);
-      if (ids.has(entry.id)) fail(`${name}.id duplicates ${entry.id}`);
-      ids.add(entry.id);
+      for (const key of ['title','authors','venue']) string(entry[key], `${name}.${key}`);
       if (!['conference','journal','award','preprint'].includes(entry.type)) fail(`${name}.type must be conference, journal, award, or preprint`);
       if (entry.year != null && (!Number.isInteger(entry.year) || entry.year < 1)) fail(`${name}.year must be a positive integer`);
       if (entry.type !== 'preprint' && entry.year == null) fail(`${name}.year is required for a published paper`);
@@ -77,7 +74,9 @@
     });
   }
 
-  function renderPaper(p, authorName) {
+  function renderPaper(p, authorName, number) {
+    const publicationTypes = {conference: ['C', 'Conference publication'], journal: ['J', 'Journal publication'], award: ['A', 'Awarded paper']};
+    const [prefix, typeLabel] = publicationTypes[p.type];
     const title = escapeHTML(p.title);
     const authors = authorName ? escapeHTML(p.authors).replace(new RegExp(`${escapeRegExp(escapeHTML(authorName))}\\*?`, 'g'), '<strong>$&</strong>') : escapeHTML(p.authors);
     const url = p.url ? escapeHTML(p.url) : null;
@@ -89,7 +88,7 @@
       p.oralAcceptanceRate != null ? `<span class="pub-rate pub-rate--oral">Oral acceptance rate: ${escapeHTML(p.oralAcceptanceRate)}%</span>` : '',
       url ? `<a class="paper-link" href="${url}" target="_blank" rel="noopener noreferrer" aria-label="Read ${title}">Paper ${icon('arrow')}</a>` : ''
     ].filter(Boolean).join('');
-    return `<article class="publication" data-publication-id="${escapeHTML(p.id)}"><h3 class="pub-title">${url ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${title}</a>` : title}</h3><p class="pub-authors">${authors}</p><p class="pub-venue">${shortName}${fullName} · <span class="pub-year">${escapeHTML(p.year)}</span></p>${details ? `<div class="pub-details">${details}</div>` : ''}${p.extraDetail ? `<p class="pub-extra">${escapeHTML(p.extraDetail)}</p>` : ''}</article>`;
+    return `<article class="publication"><span class="pub-number" aria-label="${typeLabel} ${number}">${prefix}${number}</span><div class="pub-content"><h3 class="pub-title">${url ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${title}</a>` : title}</h3><p class="pub-authors">${authors}</p><p class="pub-venue">${shortName}${fullName} · <span class="pub-year">${escapeHTML(p.year)}</span></p>${details ? `<div class="pub-details">${details}</div>` : ''}${p.extraDetail ? `<p class="pub-extra">${escapeHTML(p.extraDetail)}</p>` : ''}</div></article>`;
   }
 
   function renderEducation(entry) {
@@ -127,10 +126,14 @@
     byId('interest-list').innerHTML = data.researchInterests.map(text => `<li>${escapeHTML(text)}</li>`).join('');
     byId('education-list').innerHTML = data.education.map(renderEducation).join('');
     const papers = data.publications.filter(p => p.type !== 'preprint').sort((a, b) => b.year - a.year);
-    byId('publication-list').innerHTML = papers.map(p => renderPaper(p, profile.publicationAuthorName)).join('');
+    const remaining = papers.reduce((counts, paper) => {
+      counts[paper.type] = (counts[paper.type] || 0) + 1;
+      return counts;
+    }, {});
+    byId('publication-list').innerHTML = papers.map(p => renderPaper(p, profile.publicationAuthorName, remaining[p.type]--)).join('');
     byId('publication-summary').textContent = `${papers.length} ${site.publicationLabel}`;
     byId('publication-note').textContent = site.publicationNote;
-    byId('honors-list').innerHTML = data.honors.map(entry => `<li><strong>${escapeHTML(entry.title)}</strong>${entry.period ? ` · ${escapeHTML(entry.period)}` : ''}${entry.description ? `<br>${escapeHTML(entry.description)}` : ''}</li>`).join('');
+    byId('honors-list').innerHTML = data.honors.map(entry => `<li><strong class="honor-title">${escapeHTML(entry.title)}</strong>${entry.period ? ` · ${escapeHTML(entry.period)}` : ''}${entry.description ? `<p class="honor-description">${richText(entry.description)}</p>` : ''}</li>`).join('');
     byId('footer-email').href = `mailto:${profile.email}`;
     byId('footer-email').innerHTML = icon('mail') + escapeHTML(profile.email);
     byId('copyright-year').textContent = new Date().getFullYear();

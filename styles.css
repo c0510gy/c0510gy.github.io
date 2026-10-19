@@ -14,7 +14,7 @@
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; color: var(--text); background: #fff; font-family: var(--sans); font-size: 18px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+body { margin: 0; color: var(--text); background: #fff; font-family: var(--sans); font-size: 18px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
 ::selection { background: #e9e9e9; }
 a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 4px; }
 a:hover { text-decoration-thickness: 2px; }
@@ -40,8 +40,8 @@ section { margin-top: 42px; scroll-margin-top: 28px; }
 section:first-child { margin-top: 0; }
 h2 { display: flex; align-items: center; gap: 12px; font-family: var(--serif); font-size: 28px; font-weight: 500; line-height: 1.4; letter-spacing: -.6px; color: var(--ink); margin-bottom: 17px; }
 h2 > .icon { width: 21px; height: 21px; color: var(--accent); stroke-width: 1.6; }
-#about-content p { line-height: 1.8; }
-#about-content p + p { margin-top: 14px; }
+#about-content p { line-height: 1.6; }
+#about-content p + p { margin-top: 11px; }
 .interest-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 5px 6px; }
 .interest-list li { color: var(--ink); background: #f6f6f6; border: 1px solid #e8e8e8; padding: 1px 7px; border-radius: 4px; font-size: 16px; line-height: 1.5; font-weight: 600; }
 h3 { font-size: 18px; line-height: 1.5; font-weight: 600; color: var(--ink); }
@@ -49,20 +49,22 @@ h3 { font-size: 18px; line-height: 1.5; font-weight: 600; color: var(--ink); }
 .education-entry + .education-entry { margin-top: 24px; }
 .education-entry h3 { font-size: 19px; margin-bottom: 2px; }
 .education-entry > p { font-size: 17px; }
-.education-entry .detail { color: var(--secondary); font-size: 16px; line-height: 1.65; margin-top: 3px; }
+.education-entry .detail { color: var(--secondary); font-size: 16px; line-height: 1.5; margin-top: 3px; }
 .inline-date { font-size: 16px; color: var(--secondary); }
 .publication-note { display: flex; flex-wrap: wrap; gap: 0 10px; color: var(--secondary); font-size: 16px; margin-top: -7px; margin-bottom: 25px; }
 #publication-summary { font-weight: 600; color: var(--accent); }
 .note-dot { color: var(--ink); }
-.publication { margin-bottom: 27px; }
+.publication { display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); gap: 10px; margin-bottom: 24px; }
+.pub-number { color: #164f86; font-size: 15px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.75; }
+.pub-content { min-width: 0; }
 .pub-title { font-size: 17.5px; line-height: 1.5; font-weight: 600; color: var(--ink); }
 .pub-title a { color: inherit; text-decoration: none; }
 .pub-title a:hover { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; }
-.pub-authors { color: var(--secondary); font-size: 16px; line-height: 1.6; margin-top: 5px; }
+.pub-authors { color: var(--secondary); font-size: 16px; line-height: 1.45; margin-top: 4px; }
 .pub-authors strong { color: var(--ink); font-weight: 700; }
-.pub-venue { color: var(--ink); font-size: 16px; line-height: 1.6; margin-top: 4px; }
+.pub-venue { color: var(--ink); font-size: 16px; line-height: 1.45; margin-top: 4px; }
 .pub-venue .pub-venue-short { color: #164f86; font-weight: 700; }
-.pub-details { display: flex; flex-wrap: wrap; align-items: center; gap: 3px 10px; margin-top: 5px; font-size: 16px; line-height: 1.6; }
+.pub-details { display: flex; flex-wrap: wrap; align-items: center; gap: 3px 10px; margin-top: 4px; font-size: 16px; line-height: 1.5; }
 .pub-rate { color: var(--secondary); }
 .pub-distinction { color: #8b1e26; background: #fff2f1; border: 1px solid #e8caca; border-radius: 4px; padding: 0 5px; line-height: 1.4; font-weight: 700; }
 .pub-rate--oral { color: #8b1e26; font-weight: 600; }
@@ -72,10 +74,12 @@ h3 { font-size: 18px; line-height: 1.5; font-weight: 600; color: var(--ink); }
 .paper-link { display: inline-flex; gap: 5px; align-items: center; font-size: 16px; font-weight: 600; text-decoration: none; }
 .paper-link:hover { text-decoration: underline; }
 .paper-link .icon { width: 14px; height: 14px; }
-.honors-list { list-style: none; padding: 0; margin: 0; color: var(--secondary); font-size: 16px; line-height: 1.7; }
+.honors-list { list-style: none; padding: 0; margin: 0; color: var(--secondary); font-size: 16px; line-height: 1.5; }
 .honors-list li { position: relative; padding-left: 19px; margin-bottom: 19px; }
 .honors-list li::before { position: absolute; left: 0; top: 11px; content: ''; width: 5px; height: 5px; border-radius: 50%; background: #000; }
-.honors-list strong { font-size: 17px; font-weight: 600; color: var(--ink); }
+.honors-list .honor-title { font-size: 17px; font-weight: 600; color: var(--ink); }
+.honor-description { margin-top: 4px; }
+.honors-list .honor-description strong { color: #164f86; font-size: inherit; font-weight: 700; }
 footer { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 24px; margin-top: 50px; padding-top: 23px; border-top: 1px solid var(--line); color: var(--secondary); font-size: 16px; }
 footer a { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
 footer a:hover { text-decoration: underline; }
@@ -98,7 +102,7 @@ footer a:hover { text-decoration: underline; }
   .interest-list li { padding: 1px 7px; }
   .education-entry { padding-left: 15px; }
   .education-entry h3 { font-size: 18px; }
-  .publication { margin-bottom: 25px; }
+  .publication { grid-template-columns: 2rem minmax(0, 1fr); gap: 8px; margin-bottom: 23px; }
   .pub-title { font-size: 17px; }
   .pub-details { gap: 3px 10px; }
 }
@@ -131,6 +135,5 @@ footer a:hover { text-decoration: underline; }
 .content-message { max-width: 938px; margin: 56px auto; padding: 0 28px; font-size: 17px; }
 .content-message button { margin: 16px 20px 0 0; padding: 6px 16px; border: 1px solid #000; border-radius: 4px; background: #fff; color: #000; font: inherit; cursor: pointer; }
 .content-message button:focus-visible { outline: 2px solid #000; outline-offset: 4px; }
-.honors-list strong { color: #000; }
 
 .profile-header.no-portrait { grid-template-columns: minmax(0, 1fr); }
